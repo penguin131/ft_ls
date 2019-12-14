@@ -12,8 +12,29 @@
 
 #include "ft_ls.h"
 
-int	main(int c, char **v)
+void    read_folder(char *folder_name, t_data *data)
 {
-	ft_printf("%d: %s\n", c, v[0]);
+    DIR				*dir;
+    struct dirent	*file;
+    t_file			file_d;
+
+    if (!(dir = opendir(folder_name)))
+		invalid_folder_error(data, folder_name);
+
+    while ((file = readdir(dir)))
+	{
+    	file_d.name = file->d_name;
+    	add_new_file(data, file_d);
+		//ft_printf("%s\n", file->d_name);
+	}
+}
+
+int     main(int c, char **v)
+{
+    t_data data;
+
+    data.flags = REC_FL;
+    read_folder(".", &data);
+	//ft_printf("%d: %s\n", c, v[0]);
 	return (0);
 }
