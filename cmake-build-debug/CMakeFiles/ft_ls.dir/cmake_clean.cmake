@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_ls.dir/src/files_array.c.o"
   "CMakeFiles/ft_ls.dir/src/handle_error.c.o"
   "CMakeFiles/ft_ls.dir/src/main.c.o"
+  "CMakeFiles/ft_ls.dir/src/print_files.c.o"
   "ft_ls"
   "ft_ls.pdb"
 )

@@ -12,20 +12,20 @@
 
 #include "ft_ls.h"
 
-void	add_new_file(t_data *data, t_file file)
+void	add_new_name_to_pool(t_data *data, char *file)
 {
-	t_file	*new;
+	char	**new;
 
-	if (data->capacity == data->length)//если вместимость равна длине, то реалочу
+	if (data->capacity == data->length)
 	{
-		new = ft_memalloc(sizeof(t_file) * (data->capacity = ((data->capacity + 1) * 2)));
+		new = ft_memalloc(sizeof(char**) * (data->capacity = ((data->capacity + 1) * 2)));
 		if (!new)
 			malloc_error(data);
-		if (data->files)
-			new = ft_memcpy(new, data->files, data->length * sizeof(t_file));
-		ft_memdel((void**)&data->files);
-		data->files = new;
+		if (data->names_pool)
+			new = ft_memcpy(new, data->names_pool, data->length * sizeof(char**));
+		free_names_pool(data);
+		data->names_pool = new;
 	}
-	data->files[data->length] = file;
+	data->names_pool[data->length] = file;
 	data->length++;
 }

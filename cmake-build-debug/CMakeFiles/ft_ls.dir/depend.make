@@ -13,3 +13,7 @@ CMakeFiles/ft_ls.dir/src/main.c.o: ../inc/ft_ls.h
 CMakeFiles/ft_ls.dir/src/main.c.o: ../libft/libft.h
 CMakeFiles/ft_ls.dir/src/main.c.o: ../src/main.c
 
+CMakeFiles/ft_ls.dir/src/print_files.c.o: ../inc/ft_ls.h
+CMakeFiles/ft_ls.dir/src/print_files.c.o: ../libft/libft.h
+CMakeFiles/ft_ls.dir/src/print_files.c.o: ../src/print_files.c
+

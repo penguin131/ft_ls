@@ -9,7 +9,7 @@ include_directories(src)
 
 add_executable(ft_ls
         inc/ft_ls.h
-        src/main.c src/handle_error.c src/files_array.c)
+        src/main.c src/handle_error.c src/files_array.c src/print_files.c)
 
 target_link_libraries(ft_ls /Users/smight/Desktop/ft_ls/libft/libft.a)
 target_link_libraries(ft_ls /Users/smight/Desktop/ft_ls/libft/libftprintf.a)

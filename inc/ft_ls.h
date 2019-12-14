@@ -23,21 +23,26 @@
 #define T_FLAG 0b00010000
 #define REC_FL 0b00001000
 
-typedef struct  s_file
+typedef struct		s_file
 {
-    char        *name;
-}               t_file;
+    char 			*name;
+    struct s_data	*file;
+}					t_file;
 
-typedef struct  s_data
+typedef struct		s_data
 {
-    t_file      *files;
-    int			capacity;
-    int 		length;
-    char         flags;
-}               t_data;
+	char 			**names_pool;
+	int 			length;
+	int 			capacity;
+	char			flags;
+}					t_data;
 
 void    invalid_folder_error(t_data *data, char *folder_name);
 void	malloc_error(t_data *data);
-void	add_new_file(t_data *data, t_file file);
+void	add_new_name_to_pool(t_data *data, char *file);
+void	print_files(t_data *data);
+void	read_nested_folders(t_data *data);
+void    read_folder(t_data *data, char *folder_name);
+void	free_names_pool(t_data *data);
 
 #endif

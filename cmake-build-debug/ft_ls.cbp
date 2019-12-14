@@ -98,6 +98,9 @@
 		<Unit filename="/Users/smight/Desktop/ft_ls/src/main.c">
 			<Option target="ft_ls"/>
 		</Unit>
+		<Unit filename="/Users/smight/Desktop/ft_ls/src/print_files.c">
+			<Option target="ft_ls"/>
+		</Unit>
 		<Unit filename="/Users/smight/Desktop/ft_ls/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
