@@ -12,15 +12,20 @@
 
 #include "ft_ls.h"
 
-//void	read_nested_folders(t_data *data)
-//{
-//	int	i;
-//
-//	i = 0;
-//	while (i < data.length)
-//		if (data.files[i].is_folder == 1)
-//			read_folder(data.files[i].name);
-//}
+void	read_nested_folders(t_file *root)
+{
+	int	i;
+
+	i = 0;
+	while (i < root->file_data.length)
+	{
+		if (root->file_data.files[i].is_folder == 1 &&\
+			ft_strcmp(root->file_data.files[i].name, ".") != 0 &&\
+			ft_strcmp(root->file_data.files[i].name, "..") != 0)
+			read_folder(&root->file_data.files[i]);
+		i++;
+	}
+}
 
 int		read_file_input(t_file *input_file, t_file new_file, struct dirent *read_file)
 {
@@ -48,13 +53,15 @@ void    read_folder(t_file *input_file)
 	ft_strcpy(new_file.path, input_file->path_name);
 	ft_strcpy(new_file.path_name, input_file->path_name);
 	ft_strcat(new_file.path_name, "/");
+	new_file.file_data.length = 0;
+	new_file.file_data.capacity = 0;
 	while ((read_file = readdir(dir)))
 	{
 		if (read_file_input(input_file, new_file, read_file) == -1)
 			continue;
 	}
 	print_files(&input_file->file_data);
-//	read_nested_folders(data);
+	read_nested_folders(input_file);
 }
 
 int     main(int c, char **v)
