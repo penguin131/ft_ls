@@ -12,60 +12,59 @@
 
 #include "ft_ls.h"
 
-char	*get_full_name(char *dir, char *filename)
+//void	read_nested_folders(t_data *data)
+//{
+//	int	i;
+//
+//	i = 0;
+//	while (i < data.length)
+//		if (data.files[i].is_folder == 1)
+//			read_folder(data.files[i].name);
+//}
+
+int		read_file_input(t_file *input_file, t_file new_file, struct dirent *read_file)
 {
-	char	*result;
-	size_t	dir_len;
-	size_t	filename_len;
-
-	dir_len = ft_strlen(dir);
-	filename_len = ft_strlen(filename);
-	if (!(result = ft_memalloc(dir_len + filename_len + 1)))
-		malloc_error();
-	ft_memcpy(result, dir, dir_len);
-	ft_strcat(result, "/");
-	ft_strcat(result, filename);
-	return result;
-}
-
-void	read_nested_folders(t_data *data)
-{
-	int	i;
-
-	i = 0;
-	while (i < data.length)
-		if (data.files[i].is_folder == 1)
-			read_folder(data.files[i].name);
-}
-
-void    read_folder(t_data *data, char *folder_name)
-{
-    DIR				*dir;
-    struct dirent	*file;
 	struct stat		buff;
-	t_file			file_d;
 
-    if (!(dir = opendir(folder_name)))
-		invalid_folder_error(data, folder_name);
-    while ((file = readdir(dir)))
+	ft_strcat(new_file.path_name, read_file->d_name);
+	ft_strcpy(new_file.name, read_file->d_name);
+	if (stat(new_file.path_name, &buff) == -1)
+		return (-1);
+	new_file.is_folder = S_ISDIR(buff.st_mode) ? 1 : 0;
+	add_new_file(input_file, new_file);
+	return 1;
+}
+
+//передаю сюда уже созданную data,
+void    read_folder(t_file *input_file)
+{
+	DIR				*dir;
+	struct dirent	*read_file;
+	t_file			new_file;
+
+	if (!(dir = opendir(input_file->path_name)))
+		invalid_folder_error(input_file->name);
+	new_file.file_data.files = NULL;
+	ft_strcpy(new_file.path, input_file->path_name);
+	ft_strcpy(new_file.path_name, input_file->path_name);
+	ft_strcat(new_file.path_name, "/");
+	while ((read_file = readdir(dir)))
 	{
-    	if (!(file_d.name = get_full_name(folder_name, file->d_name)))
-    		malloc_error(data);
-    	add_new_name_to_pool(data, file_d.name);
-    	if (stat(file_d.name, &buff) == -1)
+		if (read_file_input(input_file, new_file, read_file) == -1)
 			continue;
-		file_d.is_folder = S_ISDIR(buff.st_mode) ? 1 : 0;
 	}
-	print_files(&data);
-	read_nested_folders(data);
+	print_files(&input_file->file_data);
+//	read_nested_folders(data);
 }
 
 int     main(int c, char **v)
 {
-	t_data	data;
+	flags = 0;
+	root_file = ft_memalloc(sizeof(t_file));
+	ft_strcpy(root_file->path_name, "../.");
+	ft_strcpy(root_file->path, "..");
+	ft_strcpy(root_file->name, ".");
 
-	data.names_pool = NULL;
-
-    read_folder("..");
+	read_folder(root_file);
 	return (0);
 }

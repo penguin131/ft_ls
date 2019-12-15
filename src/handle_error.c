@@ -12,28 +12,27 @@
 
 #include "ft_ls.h"
 
-void	free_names_pool(t_data *data)
+void	free_data(t_file *file)
 {
 	int	i;
 
 	i = 0;
-	while (i < data->length)
+	while (i < file->file_data.length)
 	{
-		ft_memdel((void**)&data->names_pool[i]);
-		i++;
+		free_data(&file->file_data.files[i]);
 	}
-	ft_memdel((void**)&data->names_pool);
+	ft_memdel((void**)&file->file_data.files);
 }
 
-void    invalid_folder_error(t_data *data, char *folder_name)
+void    invalid_folder_error(char *folder_name)
 {
     ft_printf("ls: %s: No such file or directory", folder_name);
-    free_names_pool(data);
+    free_data(root_file);
     exit(0);
 }
 
-void	malloc_error(t_data *data)
+void	malloc_error()
 {
-	free_names_pool(data);
+	free_data(root_file);
 	exit(0);
 }

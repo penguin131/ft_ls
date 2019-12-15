@@ -89,7 +89,7 @@
 		<Unit filename="/Users/smight/Desktop/ft_ls/inc/ft_ls.h">
 			<Option target="ft_ls"/>
 		</Unit>
-		<Unit filename="/Users/smight/Desktop/ft_ls/src/files_array.c">
+		<Unit filename="/Users/smight/Desktop/ft_ls/src/files.c">
 			<Option target="ft_ls"/>
 		</Unit>
 		<Unit filename="/Users/smight/Desktop/ft_ls/src/handle_error.c">

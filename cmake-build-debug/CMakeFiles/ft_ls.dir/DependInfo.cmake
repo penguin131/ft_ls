@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/smight/Desktop/ft_ls/src/files_array.c" "/Users/smight/Desktop/ft_ls/cmake-build-debug/CMakeFiles/ft_ls.dir/src/files_array.c.o"
+  "/Users/smight/Desktop/ft_ls/src/files.c" "/Users/smight/Desktop/ft_ls/cmake-build-debug/CMakeFiles/ft_ls.dir/src/files.c.o"
   "/Users/smight/Desktop/ft_ls/src/handle_error.c" "/Users/smight/Desktop/ft_ls/cmake-build-debug/CMakeFiles/ft_ls.dir/src/handle_error.c.o"
   "/Users/smight/Desktop/ft_ls/src/main.c" "/Users/smight/Desktop/ft_ls/cmake-build-debug/CMakeFiles/ft_ls.dir/src/main.c.o"
   "/Users/smight/Desktop/ft_ls/src/print_files.c" "/Users/smight/Desktop/ft_ls/cmake-build-debug/CMakeFiles/ft_ls.dir/src/print_files.c.o"

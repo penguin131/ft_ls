@@ -22,5 +22,4 @@ void	print_files(t_data *data)
 		ft_printf("%35s%10c\n", data->files[i].name, data->files[i].is_folder ? '1' : '0');
 		i++;
 	}
-	ft_memdel((void**)&data->files);
 }

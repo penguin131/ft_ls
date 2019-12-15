@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /private/var/folders/zz/zyxvpxvq6csfxvn_n00014jr00094f/T/AppTranslocation/444CB62E-6960-4178-B419-AEF343A12711/d/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /private/var/folders/zz/zyxvpxvq6csfxvn_n00014jr00094f/T/AppTranslocation/D0383483-66D8-4EB4-A591-99F97EB6CD52/d/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /private/var/folders/zz/zyxvpxvq6csfxvn_n00014jr00094f/T/AppTranslocation/444CB62E-6960-4178-B419-AEF343A12711/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /private/var/folders/zz/zyxvpxvq6csfxvn_n00014jr00094f/T/AppTranslocation/D0383483-66D8-4EB4-A591-99F97EB6CD52/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/smight/Desktop/ft_ls/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/private/var/folders/zz/zyxvpxvq6csfxvn_n00014jr00094f/T/AppTranslocation/444CB62E-6960-4178-B419-AEF343A12711/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/private/var/folders/zz/zyxvpxvq6csfxvn_n00014jr00094f/T/AppTranslocation/D0383483-66D8-4EB4-A591-99F97EB6CD52/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/private/var/folders/zz/zyxvpxvq6csfxvn_n00014jr00094f/T/AppTranslocation/444CB62E-6960-4178-B419-AEF343A12711/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/private/var/folders/zz/zyxvpxvq6csfxvn_n00014jr00094f/T/AppTranslocation/D0383483-66D8-4EB4-A591-99F97EB6CD52/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -123,32 +123,32 @@ ft_ls/fast:
 	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/build
 .PHONY : ft_ls/fast
 
-src/files_array.o: src/files_array.c.o
+src/files.o: src/files.c.o
 
-.PHONY : src/files_array.o
+.PHONY : src/files.o
 
 # target to build an object file
-src/files_array.c.o:
-	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/files_array.c.o
-.PHONY : src/files_array.c.o
+src/files.c.o:
+	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/files.c.o
+.PHONY : src/files.c.o
 
-src/files_array.i: src/files_array.c.i
+src/files.i: src/files.c.i
 
-.PHONY : src/files_array.i
+.PHONY : src/files.i
 
 # target to preprocess a source file
-src/files_array.c.i:
-	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/files_array.c.i
-.PHONY : src/files_array.c.i
+src/files.c.i:
+	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/files.c.i
+.PHONY : src/files.c.i
 
-src/files_array.s: src/files_array.c.s
+src/files.s: src/files.c.s
 
-.PHONY : src/files_array.s
+.PHONY : src/files.s
 
 # target to generate assembly for a file
-src/files_array.c.s:
-	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/files_array.c.s
-.PHONY : src/files_array.c.s
+src/files.c.s:
+	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/files.c.s
+.PHONY : src/files.c.s
 
 src/handle_error.o: src/handle_error.c.o
 
@@ -240,9 +240,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... ft_ls"
-	@echo "... src/files_array.o"
-	@echo "... src/files_array.i"
-	@echo "... src/files_array.s"
+	@echo "... src/files.o"
+	@echo "... src/files.i"
+	@echo "... src/files.s"
 	@echo "... src/handle_error.o"
 	@echo "... src/handle_error.i"
 	@echo "... src/handle_error.s"

@@ -16,6 +16,7 @@
 #include "../libft/libft.h"
 #include <dirent.h>
 #include <sys/stat.h>
+#include "ft_ls.h"
 
 #define R_FLAG 0b10000000
 #define L_FLAG 0b01000000
@@ -23,26 +24,36 @@
 #define T_FLAG 0b00010000
 #define REC_FL 0b00001000
 
-typedef struct		s_file
-{
-    char 			*name;
-    struct s_data	*file;
-}					t_file;
+#define MAX_NAME_LEN 255
+#define PATH_NAME_LEN 4096
 
 typedef struct		s_data
 {
-	char 			**names_pool;
+	struct s_file	*files;
 	int 			length;
 	int 			capacity;
-	char			flags;
 }					t_data;
 
-void    invalid_folder_error(t_data *data, char *folder_name);
-void	malloc_error(t_data *data);
-void	add_new_name_to_pool(t_data *data, char *file);
+typedef struct		s_file
+{
+	char 			name[MAX_NAME_LEN];
+	char			path[PATH_NAME_LEN];
+	char			path_name[PATH_NAME_LEN + MAX_NAME_LEN];
+	char			is_folder;
+	struct s_data	file_data;
+}					t_file;
+
+void    invalid_folder_error(char *folder_name);
+void	malloc_error();
+void	add_new_file(t_file *file, t_file new_file);
 void	print_files(t_data *data);
 void	read_nested_folders(t_data *data);
-void    read_folder(t_data *data, char *folder_name);
+void    read_folder(t_file *input_file);
 void	free_names_pool(t_data *data);
+
+
+
+static char			flags;
+static t_file		*root_file;
 
 #endif
