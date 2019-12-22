@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_ls.dir/src/handle_error.c.o"
   "CMakeFiles/ft_ls.dir/src/main.c.o"
   "CMakeFiles/ft_ls.dir/src/print_files.c.o"
+  "CMakeFiles/ft_ls.dir/src/read_folders.c.o"
   "CMakeFiles/ft_ls.dir/src/sorting.c.o"
   "ft_ls"
   "ft_ls.pdb"

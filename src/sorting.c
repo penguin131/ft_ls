@@ -14,11 +14,12 @@
 
 void	swap(t_file *files, int first, int second)
 {
-	t_file	file;
+	t_file	*file;
 
-	file = files->file_data.files[first];
+	file = &files->file_data.files[first];
+	//ft_memcpy(&files->file_data.files[first], &files->file_data.files[second], sizeof(t_file));
 	files->file_data.files[first] = files->file_data.files[second];
-	files->file_data.files[second] = file;
+	files->file_data.files[second] = *file;
 }
 
 void	q_sort(t_file *files, int start, int end)
@@ -28,6 +29,7 @@ void	q_sort(t_file *files, int start, int end)
 	int		right;
 
 	middle = files->file_data.files[(start + end) / 2];
+	//ft_memcpy(&middle, &files->file_data.files[(start + end) / 2], sizeof(t_file));
 	left = start;
 	right = end;
 	while(left <= right)

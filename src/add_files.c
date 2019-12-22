@@ -13,7 +13,7 @@
 #include "ft_ls.h"
 
 //добавляет новый файл по указателю в массив в дате
-void	add_new_file(t_file *file, t_file new_file)
+void	add_new_file(t_info *info, t_file *file, t_file new_file)
 {
 	t_file *new;
 
@@ -22,7 +22,7 @@ void	add_new_file(t_file *file, t_file new_file)
 		new = ft_memalloc(sizeof(t_file) *
 				(file->file_data.capacity = ((file->file_data.capacity + 1) * 2)));
 		if (!new)
-			malloc_error();
+			malloc_error(info);
 		if (file->file_data.files)
 			new = ft_memcpy(new, file->file_data.files, file->file_data.length * sizeof(t_file));
 		ft_memdel((void**)&file->file_data.files);

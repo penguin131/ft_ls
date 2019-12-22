@@ -231,6 +231,33 @@ src/print_files.c.s:
 	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/print_files.c.s
 .PHONY : src/print_files.c.s
 
+src/read_folders.o: src/read_folders.c.o
+
+.PHONY : src/read_folders.o
+
+# target to build an object file
+src/read_folders.c.o:
+	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/read_folders.c.o
+.PHONY : src/read_folders.c.o
+
+src/read_folders.i: src/read_folders.c.i
+
+.PHONY : src/read_folders.i
+
+# target to preprocess a source file
+src/read_folders.c.i:
+	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/read_folders.c.i
+.PHONY : src/read_folders.c.i
+
+src/read_folders.s: src/read_folders.c.s
+
+.PHONY : src/read_folders.s
+
+# target to generate assembly for a file
+src/read_folders.c.s:
+	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/read_folders.c.s
+.PHONY : src/read_folders.c.s
+
 src/sorting.o: src/sorting.c.o
 
 .PHONY : src/sorting.o
@@ -279,6 +306,9 @@ help:
 	@echo "... src/print_files.o"
 	@echo "... src/print_files.i"
 	@echo "... src/print_files.s"
+	@echo "... src/read_folders.o"
+	@echo "... src/read_folders.i"
+	@echo "... src/read_folders.s"
 	@echo "... src/sorting.o"
 	@echo "... src/sorting.i"
 	@echo "... src/sorting.s"

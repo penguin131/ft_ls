@@ -1,6 +1,6 @@
 NAME = ft_ls
 
-FILES = main.c
+FILES = main.c files.c handle_error.c print_files.c read_folders.c sorting.c
 
 S_DIR = src/
 
@@ -10,15 +10,15 @@ SRC = $(addprefix $(S_DIR), $(FILES))
 
 OBJ = $(addprefix $(O_DIR), $(FILES:.c=.o))
 
-FLAGS = -Wall -Wextra -Werror
+FLAGS =
 
-all: $(NAME)
+all: $(NAME) libft/
 
 $(NAME) : $(OBJ)
 	make -C libft/
 	gcc -o $(NAME) $(OBJ) -Iinc -L libft libft/libftprintf.a
 
-$(O_DIR)%.o:$(S_DIR)%.c
+$(O_DIR)%.o:$(S_DIR)%.c inc
 	mkdir -p $(O_DIR)
 	gcc $(FLAGS) -Iinc -o $@ -c $<
 

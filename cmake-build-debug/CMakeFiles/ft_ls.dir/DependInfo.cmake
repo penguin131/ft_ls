@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/smight/Desktop/ft_ls/src/handle_error.c" "/Users/smight/Desktop/ft_ls/cmake-build-debug/CMakeFiles/ft_ls.dir/src/handle_error.c.o"
   "/Users/smight/Desktop/ft_ls/src/main.c" "/Users/smight/Desktop/ft_ls/cmake-build-debug/CMakeFiles/ft_ls.dir/src/main.c.o"
   "/Users/smight/Desktop/ft_ls/src/print_files.c" "/Users/smight/Desktop/ft_ls/cmake-build-debug/CMakeFiles/ft_ls.dir/src/print_files.c.o"
+  "/Users/smight/Desktop/ft_ls/src/read_folders.c" "/Users/smight/Desktop/ft_ls/cmake-build-debug/CMakeFiles/ft_ls.dir/src/read_folders.c.o"
   "/Users/smight/Desktop/ft_ls/src/sorting.c" "/Users/smight/Desktop/ft_ls/cmake-build-debug/CMakeFiles/ft_ls.dir/src/sorting.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
