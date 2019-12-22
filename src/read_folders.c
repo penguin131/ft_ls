@@ -61,6 +61,7 @@ void    read_folder(t_info *info, t_file *input_file)
 		if (read_file_input(info, input_file, temp_file, read_file) == -1)
 			continue;
 	}
+	closedir(dir);
 	file_sorting(input_file);
 	print_files(info, input_file);
 	if (info->is_many_folders == 1)

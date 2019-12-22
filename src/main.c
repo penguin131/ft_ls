@@ -19,7 +19,7 @@ void	read_folder_args(t_info *info, int argc, char **argv)
 	i = 0;
 	if (argc <= 2)
 	{
-		info->is_many_folders = 0;
+		info->is_many_folders = 1;
 		info->root_file.is_folder = 1;
 		ft_strcpy(info->root_file.name, argc == 2 ? argv[1] : ".");
 		ft_strcpy(info->root_file.path, "./");
