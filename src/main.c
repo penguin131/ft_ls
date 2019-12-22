@@ -60,7 +60,9 @@ void    read_folder(t_file *input_file)
 		if (read_file_input(input_file, new_file, read_file) == -1)
 			continue;
 	}
-	print_files(&input_file->file_data);
+	if (new_file.file_data.files)
+		file_sorting(&new_file);
+	print_files(input_file);
 	read_nested_folders(input_file);
 }
 

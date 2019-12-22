@@ -17,3 +17,7 @@ CMakeFiles/ft_ls.dir/src/print_files.c.o
  ../inc/ft_ls.h
  ../libft/libft.h
  /Users/smight/Desktop/ft_ls/src/print_files.c
+CMakeFiles/ft_ls.dir/src/sorting.c.o
+ ../inc/ft_ls.h
+ ../libft/libft.h
+ /Users/smight/Desktop/ft_ls/src/sorting.c

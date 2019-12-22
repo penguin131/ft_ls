@@ -12,14 +12,16 @@
 
 #include "ft_ls.h"
 
-void	print_files(t_data *data)
+void	print_files(t_file *file)
 {
 	int	i;
 
 	i = 0;
-	while (i < data->length)
+	ft_printf("%s:\n", file->path);
+	while (i < file->file_data.length)
 	{
-		ft_printf("%35s%10c\n", data->files[i].name, data->files[i].is_folder ? '1' : '0');
+		ft_printf("%35s%10c\n", file->file_data.files[i].name, file->file_data.files[i].is_folder ? '1' : '0');
 		i++;
 	}
+	ft_printf("\n");
 }

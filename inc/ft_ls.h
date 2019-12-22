@@ -46,10 +46,11 @@ typedef struct		s_file
 void    invalid_folder_error(char *folder_name);
 void	malloc_error();
 void	add_new_file(t_file *file, t_file new_file);
-void	print_files(t_data *data);
+void	print_files(t_file *file);
 void	read_nested_folders(t_file *root);
 void    read_folder(t_file *input_file);
 void	free_names_pool(t_data *data);
+void	file_sorting(t_file *file);
 
 static char			flags;
 static t_file		*root_file;
