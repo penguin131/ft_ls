@@ -34,10 +34,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /private/var/folders/zz/zyxvpxvq6csfxvn_n00014jr00094f/T/AppTranslocation/155DC44A-9ACA-4EEC-BE26-AF73F36D4BD4/d/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /private/var/folders/zz/zyxvpxvq6csfxvn_n00014jr00094f/T/AppTranslocation/9E74C4D8-0241-4E1D-9AA1-974BE375D44E/d/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /private/var/folders/zz/zyxvpxvq6csfxvn_n00014jr00094f/T/AppTranslocation/155DC44A-9ACA-4EEC-BE26-AF73F36D4BD4/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /private/var/folders/zz/zyxvpxvq6csfxvn_n00014jr00094f/T/AppTranslocation/9E74C4D8-0241-4E1D-9AA1-974BE375D44E/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -83,18 +83,18 @@ CMakeFiles/ft_ls.dir/src/handle_error.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_ls.dir/src/handle_error.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/smight/Desktop/ft_ls/src/handle_error.c -o CMakeFiles/ft_ls.dir/src/handle_error.c.s
 
-CMakeFiles/ft_ls.dir/src/files.c.o: CMakeFiles/ft_ls.dir/flags.make
-CMakeFiles/ft_ls.dir/src/files.c.o: ../src/files.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/smight/Desktop/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ft_ls.dir/src/files.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/src/files.c.o   -c /Users/smight/Desktop/ft_ls/src/files.c
+CMakeFiles/ft_ls.dir/src/add_files.c.o: CMakeFiles/ft_ls.dir/flags.make
+CMakeFiles/ft_ls.dir/src/add_files.c.o: ../src/add_files.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/smight/Desktop/ft_ls/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ft_ls.dir/src/add_files.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_ls.dir/src/add_files.c.o   -c /Users/smight/Desktop/ft_ls/src/add_files.c
 
-CMakeFiles/ft_ls.dir/src/files.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_ls.dir/src/files.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/smight/Desktop/ft_ls/src/files.c > CMakeFiles/ft_ls.dir/src/files.c.i
+CMakeFiles/ft_ls.dir/src/add_files.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_ls.dir/src/add_files.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/smight/Desktop/ft_ls/src/add_files.c > CMakeFiles/ft_ls.dir/src/add_files.c.i
 
-CMakeFiles/ft_ls.dir/src/files.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_ls.dir/src/files.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/smight/Desktop/ft_ls/src/files.c -o CMakeFiles/ft_ls.dir/src/files.c.s
+CMakeFiles/ft_ls.dir/src/add_files.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_ls.dir/src/add_files.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/smight/Desktop/ft_ls/src/add_files.c -o CMakeFiles/ft_ls.dir/src/add_files.c.s
 
 CMakeFiles/ft_ls.dir/src/print_files.c.o: CMakeFiles/ft_ls.dir/flags.make
 CMakeFiles/ft_ls.dir/src/print_files.c.o: ../src/print_files.c
@@ -139,7 +139,7 @@ CMakeFiles/ft_ls.dir/src/read_folders.c.s: cmake_force
 ft_ls_OBJECTS = \
 "CMakeFiles/ft_ls.dir/src/main.c.o" \
 "CMakeFiles/ft_ls.dir/src/handle_error.c.o" \
-"CMakeFiles/ft_ls.dir/src/files.c.o" \
+"CMakeFiles/ft_ls.dir/src/add_files.c.o" \
 "CMakeFiles/ft_ls.dir/src/print_files.c.o" \
 "CMakeFiles/ft_ls.dir/src/sorting.c.o" \
 "CMakeFiles/ft_ls.dir/src/read_folders.c.o"
@@ -149,7 +149,7 @@ ft_ls_EXTERNAL_OBJECTS =
 
 ft_ls: CMakeFiles/ft_ls.dir/src/main.c.o
 ft_ls: CMakeFiles/ft_ls.dir/src/handle_error.c.o
-ft_ls: CMakeFiles/ft_ls.dir/src/files.c.o
+ft_ls: CMakeFiles/ft_ls.dir/src/add_files.c.o
 ft_ls: CMakeFiles/ft_ls.dir/src/print_files.c.o
 ft_ls: CMakeFiles/ft_ls.dir/src/sorting.c.o
 ft_ls: CMakeFiles/ft_ls.dir/src/read_folders.c.o

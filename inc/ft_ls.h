@@ -27,30 +27,26 @@
 #define MAX_NAME_LEN 255
 #define PATH_NAME_LEN 4096
 
-typedef struct		s_data
-{
-	struct s_file	*files;
-	int 			length;
-	int 			capacity;
-}					t_data;
-
 typedef struct		s_file
 {
 	char 			name[MAX_NAME_LEN];
 	char			path[PATH_NAME_LEN];
 	char			path_name[PATH_NAME_LEN + MAX_NAME_LEN];
 	char			is_folder;
-	struct s_data	file_data;
+	char 			is_error;
+	int 			length;
+	int 			capacity;
+	struct s_file	*files;
 }					t_file;
 
 typedef struct		s_info
 {
 	char			flags;
 	char 			is_many_folders;
-	t_file			root_file;
+	t_file			mock_folder;
 }					t_info;
 
-void    invalid_folder_error(t_info *info, char *folder_name);
+void    print_invalid_folders(t_info *info);
 void	malloc_error(t_info *info);
 void	add_new_file(t_info *info, t_file *file, t_file new_file);
 void	print_files(t_info *info, t_file *file);

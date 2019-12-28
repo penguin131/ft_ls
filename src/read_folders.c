@@ -17,12 +17,12 @@ void	read_nested_folders(t_info *info, t_file *root)
 	int	i;
 
 	i = 0;
-	while (i < root->file_data.length)
+	while (i < root->length)
 	{
-		if (root->file_data.files[i].is_folder == 1 &&\
-			ft_strcmp(root->file_data.files[i].name, ".") != 0 &&\
-			ft_strcmp(root->file_data.files[i].name, "..") != 0)
-			read_folder(info, &root->file_data.files[i]);
+		if (root->files[i].is_folder == 1 &&\
+			ft_strcmp(root->files[i].name, ".") != 0 &&\
+			ft_strcmp(root->files[i].name, "..") != 0)
+			read_folder(info, &root->files[i]);
 		i++;
 	}
 }
@@ -48,14 +48,12 @@ void    read_folder(t_info *info, t_file *input_file)
 	t_file			temp_file;
 
 	ft_bzero(&temp_file, sizeof(t_file));
-	if (!(dir = opendir(input_file->path_name)))
-		invalid_folder_error(info, input_file->name);
-	temp_file.file_data.files = NULL;
+	temp_file.files = NULL;
 	ft_strcpy(temp_file.path, input_file->path_name);
 	ft_strcpy(temp_file.path_name, input_file->path_name);
 	ft_strcat(temp_file.path_name, "/");
-	temp_file.file_data.length = 0;
-	temp_file.file_data.capacity = 0;
+	temp_file.length = 0;
+	temp_file.capacity = 0;
 	while ((read_file = readdir(dir)))
 	{
 		if (read_file_input(info, input_file, temp_file, read_file) == -1)
@@ -63,7 +61,7 @@ void    read_folder(t_info *info, t_file *input_file)
 	}
 	closedir(dir);
 	file_sorting(input_file);
-	print_files(info, input_file);
+	//print_files(info, input_file);
 	if (info->is_many_folders == 1)
 		read_nested_folders(info, input_file);
 }

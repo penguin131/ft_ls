@@ -17,17 +17,17 @@ void	add_new_file(t_info *info, t_file *file, t_file new_file)
 {
 	t_file *new;
 
-	if (file->file_data.capacity == file->file_data.length)
+	if (file->capacity == file->length)
 	{
 		new = ft_memalloc(sizeof(t_file) *
-				(file->file_data.capacity = ((file->file_data.capacity + 1) * 2)));
+				(file->capacity = ((file->capacity + 1) * 2)));
 		if (!new)
 			malloc_error(info);
-		if (file->file_data.files)
-			new = ft_memcpy(new, file->file_data.files, file->file_data.length * sizeof(t_file));
-		ft_memdel((void**)&file->file_data.files);
-		file->file_data.files = new;
+		if (file->files)
+			new = ft_memcpy(new, file->files, file->length * sizeof(t_file));
+		ft_memdel((void**)&file->files);
+		file->files = new;
 	}
-	file->file_data.files[file->file_data.length] = new_file;
-	file->file_data.length++;
+	file->files[file->length] = new_file;
+	file->length++;
 }

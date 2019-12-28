@@ -12,14 +12,14 @@
 
 #include "ft_ls.h"
 
-void	swap(t_file *files, int first, int second)
+void	swap(t_file *file, int first, int second)
 {
-	t_file	*file;
+	t_file	tmp;
 
-	file = &files->file_data.files[first];
-	//ft_memcpy(&files->file_data.files[first], &files->file_data.files[second], sizeof(t_file));
-	files->file_data.files[first] = files->file_data.files[second];
-	files->file_data.files[second] = *file;
+	ft_bzero(&tmp, sizeof(t_file));
+	ft_memcpy(&tmp, &file->files[first], sizeof(t_file));
+	ft_memcpy(&file->files[first], &file->files[second], sizeof(t_file));
+	ft_memcpy(&file->files[second], &tmp, sizeof(t_file));
 }
 
 void	q_sort(t_file *files, int start, int end)
@@ -28,15 +28,14 @@ void	q_sort(t_file *files, int start, int end)
 	int		left;
 	int		right;
 
-	middle = files->file_data.files[(start + end) / 2];
-	//ft_memcpy(&middle, &files->file_data.files[(start + end) / 2], sizeof(t_file));
+	middle = files->files[(start + end) / 2];
 	left = start;
 	right = end;
 	while(left <= right)
 	{
-		while (ft_strcmp(files->file_data.files[left].name, middle.name) > 0)
+		while (ft_strcmp(files->files[left].name, middle.name) < 0)
 			left++;
-		while (ft_strcmp(middle.name, files->file_data.files[right].name) > 0)
+		while (ft_strcmp(middle.name, files->files[right].name) < 0)
 			right--;
 		if (left <= right)
 			swap(files, left++, right--);
@@ -49,5 +48,5 @@ void	q_sort(t_file *files, int start, int end)
 
 void	file_sorting(t_file *file)
 {
-	q_sort(file, 0, file->file_data.length);
+	q_sort(file, 0, file->length - 1);
 }

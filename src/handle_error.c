@@ -17,26 +17,19 @@ void	free_data(t_file *file)
 	int	i;
 
 	i = 0;
-	while (i < file->file_data.length)
+	while (i < file->length)
 	{
-		if (ft_strcmp(file->file_data.files[i].name, ".") != 0
-		&& ft_strcmp(file->file_data.files[i].name, "..") != 0
-		&& file->file_data.files[i].is_folder == 1)
-			free_data(&file->file_data.files[i]);
+		if (ft_strcmp(file->files[i].name, ".") != 0
+		&& ft_strcmp(file->files[i].name, "..") != 0
+		&& file->files[i].is_folder == 1)
+			free_data(&file->files[i]);
 		i++;
 	}
-	ft_memdel((void**)&file->file_data.files);
-}
-
-void    invalid_folder_error(t_info *info, char *folder_name)
-{
-    ft_printf("ls: %s: No such file or directory", folder_name);
-    free_data(&info->root_file);
-    exit(0);
+	ft_memdel((void**)&file->files);
 }
 
 void	malloc_error(t_info *info)
 {
-	free_data(&info->root_file);
+	free_data(&info->mock_folder);
 	exit(0);
 }
