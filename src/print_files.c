@@ -17,8 +17,8 @@ void	print_files(t_info *info, t_file *file)
 	int	i;
 
 	i = 0;
-	if (info->is_many_folders == 1)
-		ft_printf("%s:\n", file->path);
+	if (info->mock_folder.length > 1)
+		ft_printf("%s:\n", file->path_name);
 	while (i < file->length)
 	{
 		ft_printf("%35s%10c\n", file->files[i].name, file->files[i].is_folder ? '1' : '0');

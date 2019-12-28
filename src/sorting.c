@@ -48,5 +48,6 @@ void	q_sort(t_file *files, int start, int end)
 
 void	file_sorting(t_file *file)
 {
-	q_sort(file, 0, file->length - 1);
+	if (file->length > 1)
+		q_sort(file, 0, file->length - 1);
 }

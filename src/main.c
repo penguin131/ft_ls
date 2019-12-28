@@ -42,12 +42,36 @@ void	create_root_file(t_info *info)
 	ft_strcpy(info->mock_folder.files[0].path_name, "./");
 }
 
+void	read_args(t_info *info)
+{
+	int	i;
+
+	i = 0;
+	while (i < info->mock_folder.length)
+	{
+		read_folder(info, &info->mock_folder.files[i]);
+		i++;
+	}
+}
+
+void	free_folders(t_info *info)
+{
+	int	i;
+
+	i = 0;
+	while (i < info->mock_folder.length)
+	{
+		free_data(&info->mock_folder.files[i]);
+		i++;
+	}
+}
+
 int     main(int argc, char **argv)
 {
 	t_info	info;
 
 	ft_bzero(&info, sizeof(t_info));
-	info.mock_folder.length = (argc > 1 ? argc : 1) - 1;
+	info.mock_folder.length = argc > 1 ? argc - 1 : 1;
 	if (!(info.mock_folder.files = ft_memalloc(sizeof(t_file) * info.mock_folder.length)))
 		malloc_error(&info);
 	if (argc < 2)
@@ -56,7 +80,8 @@ int     main(int argc, char **argv)
 		read_folder_args(&info, argc, argv);
 	file_sorting(&info.mock_folder);
 	print_invalid_folders(&info);
-	free_data(&info.mock_folder);
+	read_args(&info);
+	free_folders(&info);
 	ft_memdel((void**)&info.mock_folder.files);
 	return (0);
 }

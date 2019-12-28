@@ -17,7 +17,7 @@ void	add_new_file(t_info *info, t_file *file, t_file new_file)
 {
 	t_file *new;
 
-	if (file->capacity == file->length)
+	if (file->capacity <= file->length)
 	{
 		new = ft_memalloc(sizeof(t_file) *
 				(file->capacity = ((file->capacity + 1) * 2)));
