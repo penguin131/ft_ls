@@ -40,7 +40,6 @@ int		read_file_input(t_info *info, t_file *input_file, t_file new_file, struct d
 	return (1);
 }
 
-//передаю сюда уже созданную data,
 void    read_folder(t_info *info, t_file *input_file)
 {
 	DIR				*dir;

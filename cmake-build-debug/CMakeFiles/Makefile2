@@ -35,10 +35,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /private/var/folders/zz/zyxvpxvq6csfxvn_n00014jr00094f/T/AppTranslocation/9E74C4D8-0241-4E1D-9AA1-974BE375D44E/d/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /private/var/folders/zz/zyxvpxvq6csfxvn_n00014jr00094f/T/AppTranslocation/171011D1-A7A7-4899-8DD0-6658FCD570AF/d/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /private/var/folders/zz/zyxvpxvq6csfxvn_n00014jr00094f/T/AppTranslocation/9E74C4D8-0241-4E1D-9AA1-974BE375D44E/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /private/var/folders/zz/zyxvpxvq6csfxvn_n00014jr00094f/T/AppTranslocation/171011D1-A7A7-4899-8DD0-6658FCD570AF/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -74,12 +74,12 @@ preinstall:
 CMakeFiles/ft_ls.dir/all:
 	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/depend
 	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/smight/Desktop/ft_ls/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target ft_ls"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/smight/Desktop/ft_ls/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target ft_ls"
 .PHONY : CMakeFiles/ft_ls.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ft_ls.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/smight/Desktop/ft_ls/cmake-build-debug/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/smight/Desktop/ft_ls/cmake-build-debug/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ft_ls.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/smight/Desktop/ft_ls/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/ft_ls.dir/rule

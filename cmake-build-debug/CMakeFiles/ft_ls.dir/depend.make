@@ -17,6 +17,10 @@ CMakeFiles/ft_ls.dir/src/print_files.c.o: ../inc/ft_ls.h
 CMakeFiles/ft_ls.dir/src/print_files.c.o: ../libft/libft.h
 CMakeFiles/ft_ls.dir/src/print_files.c.o: ../src/print_files.c
 
+CMakeFiles/ft_ls.dir/src/read_flags.c.o: ../inc/ft_ls.h
+CMakeFiles/ft_ls.dir/src/read_flags.c.o: ../libft/libft.h
+CMakeFiles/ft_ls.dir/src/read_flags.c.o: ../src/read_flags.c
+
 CMakeFiles/ft_ls.dir/src/read_folders.c.o: ../inc/ft_ls.h
 CMakeFiles/ft_ls.dir/src/read_folders.c.o: ../libft/libft.h
 CMakeFiles/ft_ls.dir/src/read_folders.c.o: ../src/read_folders.c

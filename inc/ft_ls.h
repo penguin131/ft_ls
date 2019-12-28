@@ -27,6 +27,8 @@
 #define MAX_NAME_LEN 255
 #define PATH_NAME_LEN 4096
 
+#define FLAG_TYPES "alRrt"
+
 typedef struct		s_file
 {
 	char 			name[MAX_NAME_LEN];
@@ -41,7 +43,7 @@ typedef struct		s_file
 
 typedef struct		s_info
 {
-	char			flags;
+	unsigned char	flags;
 	char 			is_many_folders;
 	t_file			mock_folder;
 }					t_info;
@@ -55,5 +57,6 @@ void    read_folder(t_info *info, t_file *input_file);
 void	free_data(t_file *file);
 void	file_sorting(t_file *file);
 void	read_folder_args(t_info *info, int argc, char **argv);
+void	read_flags(t_info *info, int argc, char **argv);
 
 #endif

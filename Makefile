@@ -1,6 +1,6 @@
 NAME = ft_ls
 
-FILES = main.c add_files.c handle_error.c print_files.c read_folders.c sorting.c
+FILES = main.c add_files.c handle_error.c print_files.c read_folders.c sorting.c read_flags.c
 
 S_DIR = src/
 
