@@ -21,28 +21,28 @@ void	throw_usage(char c)
 
 void	read_flags(t_info *info, int argc, char **argv)
 {
-	int	i;
 	int j;
 
-	i = 1;
-	while (i < argc && argv[i][0] == '-')
+	info->start = 1;
+	while (info->start < argc && argv[info->start][0] == '-')
 	{
 		j = 0;
-		while (argv[i][j] && argv[i][++j])
+		while (argv[info->start][j] && argv[info->start][++j])
 		{
-			if (argv[i][j] == 'L')
+			if (argv[info->start][j] == 'L')
 				info->flags |= L_FLAG;
-			else if (argv[i][j] == 'a')
+			else if (argv[info->start][j] == 'a')
 				info->flags |= A_FLAG;
-			else if (argv[i][j] == 'R')
+			else if (argv[info->start][j] == 'R')
 				info->flags |= REC_FL;
-			else if (argv[i][j] == 'r')
+			else if (argv[info->start][j] == 'r')
 				info->flags |= R_FLAG;
-			else if (argv[i][j] == 't')
+			else if (argv[info->start][j] == 't')
 				info->flags |= T_FLAG;
 			else
-				throw_usage(argv[i][j]);
+				throw_usage(argv[info->start][j]);
 		}
-		i++;
+		(info->start)++;
 	}
+//	info->start = 1;
 }

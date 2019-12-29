@@ -25,15 +25,13 @@
 #define REC_FL 0b00001000
 
 #define MAX_NAME_LEN 255
-#define PATH_NAME_LEN 4096
 
 #define FLAG_TYPES "alRrt"
 
 typedef struct		s_file
 {
 	char 			name[MAX_NAME_LEN];
-	char			path[PATH_NAME_LEN];
-	char			path_name[PATH_NAME_LEN + MAX_NAME_LEN];
+	char			*path_name;
 	char			is_folder;
 	char 			is_error;
 	int 			length;
@@ -45,6 +43,7 @@ typedef struct		s_info
 {
 	unsigned char	flags;
 	char 			is_many_folders;
+	int 			start;
 	t_file			mock_folder;
 }					t_info;
 

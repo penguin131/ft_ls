@@ -17,8 +17,9 @@ void	free_data(t_file *file)
 	int	i;
 
 	i = 0;
-	while (i < file->length)
+	while (file->files && i < file->length)
 	{
+		ft_strdel(&file->files[i].path_name);
 		if (ft_strcmp(file->files[i].name, ".") != 0
 		&& ft_strcmp(file->files[i].name, "..") != 0
 		&& file->files[i].is_folder == 1)
