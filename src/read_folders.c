@@ -12,6 +12,20 @@
 
 #include "ft_ls.h"
 
+int is_hidden_root(const char *name)
+{
+	if ((flags & A_FLAG) != 0)
+		return (0);
+	return (name[0] == '.' && name[1] != '.' && name[1] != 0);
+}
+
+int is_hidden(const char *name)
+{
+	if ((flags & A_FLAG) != 0)
+		return (0);
+	return (name[0] == '.');
+}
+
 void	read_nested_folders(t_info *info, t_file *root)
 {
 	int	i;
@@ -54,6 +68,8 @@ void    read_folder(t_info *info, t_file *input_file)
 	//в цикле прохожусь по всем файлам в данной директории
 	while ((read_file = readdir(dir)))
 	{
+		if (is_hidden(read_file->d_name))
+			continue;
 		if (!(temp_file.path_name = ft_strnew(len + 1 + ft_strlen(read_file->d_name))))
 			malloc_error(info);
 		ft_strcat(temp_file.path_name, input_file->path_name);
@@ -63,8 +79,8 @@ void    read_folder(t_info *info, t_file *input_file)
 	}
 	closedir(dir);
 	file_sorting(input_file);
-	//print_files(info, input_file);
-	if ((info->flags & REC_FL) != 0)
+	print_files(info, input_file);
+	if ((flags & REC_FL) != 0)
 		read_nested_folders(info, input_file);
 	free_data(input_file);
 }

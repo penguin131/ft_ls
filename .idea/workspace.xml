@@ -13,9 +13,38 @@
   <component name="ChangeListManager">
     <list default="true" id="3d84d632-63c9-46a7-82b0-dde20a18e17b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/add_files.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/add_files.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/handle_error.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/handle_error.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/main.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/print_files.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/print_files.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/read_flags.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/read_flags.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/read_folders.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/read_folders.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/sorting.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/sorting.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ft_ls" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ft_ls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ft_ls" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_ls.dSYM/Contents/Resources/DWARF/ft_ls" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ls.dSYM/Contents/Resources/DWARF/ft_ls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/ft_ls.h" beforeDir="false" afterPath="$PROJECT_DIR$/inc/ft_ls.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/libft.a" beforeDir="false" afterPath="$PROJECT_DIR$/libft/libft.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/add_files.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/add_files.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/handle_error.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/handle_error.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/main.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/print_files.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/print_files.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/read_flags.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/read_flags.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/read_folders.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/read_folders.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/sorting.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/sorting.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/print_files.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/print_files.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/read_flags.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/read_flags.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/read_folders.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/read_folders.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sorting.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/sorting.c" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +97,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="ft_ls" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-R ../" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ft_ls" TARGET_NAME="ft_ls" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ft_ls" RUN_TARGET_NAME="ft_ls">
+    <configuration name="ft_ls" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS=".." PASS_PARENT_ENVS_2="true" PROJECT_NAME="ft_ls" TARGET_NAME="ft_ls" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ft_ls" RUN_TARGET_NAME="ft_ls">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -97,7 +126,9 @@
       <workItem from="1577616979543" duration="730000" />
       <workItem from="1577617731369" duration="31000" />
       <workItem from="1577617772824" duration="9000" />
-      <workItem from="1577617798141" duration="7777000" />
+      <workItem from="1577617798141" duration="8004000" />
+      <workItem from="1577787073678" duration="1292000" />
+      <workItem from="1577794437852" duration="3722000" />
     </task>
     <servers />
   </component>
@@ -116,12 +147,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <watches-manager>
-      <configuration name="CMakeRunConfiguration">
-        <watch expression="stat(&quot;~/Desktop&quot;, &amp;buff)" language="ObjectiveC" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>

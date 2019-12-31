@@ -24,6 +24,7 @@ void	read_folder_args(t_info *info, int argc, char **argv)
 	{
 		//прохожу по всем папкам из аргументов. Пихаю имя
 		ft_bzero(curr_file.name, MAX_NAME_LEN);
+		curr_file.is_error = 0;
 		ft_strcat(curr_file.name, argv[info->start]);
 		if (!(curr_file.path_name = ft_strdup(curr_file.name)))
 			malloc_error(info);
@@ -49,7 +50,8 @@ void	read_args(t_info *info)
 	i = 0;
 	while (i < info->mock_folder.length)
 	{
-		if (info->mock_folder.files[i].is_error == 0)
+		if (info->mock_folder.files[i].is_error == 0 &&
+			!is_hidden_root(info->mock_folder.files[i].name))
 			read_folder(info, &info->mock_folder.files[i]);
 		i++;
 	}
@@ -73,6 +75,7 @@ int     main(int argc, char **argv)
 	t_info	info;
 
 	ft_bzero(&info, sizeof(t_info));
+	flags = 0;
 	//читаю флаги и сдвигаю стартовый аргумент, если есть флаги
 	read_flags(&info, argc, argv);
 	info.mock_folder.length = argc - info.start > 0 ? argc - info.start : 1;

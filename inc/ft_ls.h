@@ -41,11 +41,11 @@ typedef struct		s_file
 
 typedef struct		s_info
 {
-	unsigned char	flags;
-	char 			is_many_folders;
 	int 			start;
 	t_file			mock_folder;
 }					t_info;
+
+unsigned char		flags;
 
 void    print_invalid_folders(t_info *info);
 void	malloc_error(t_info *info);
@@ -57,5 +57,6 @@ void	free_data(t_file *file);
 void	file_sorting(t_file *file);
 void	read_folder_args(t_info *info, int argc, char **argv);
 void	read_flags(t_info *info, int argc, char **argv);
+int is_hidden_root(const char *name);
 
 #endif
