@@ -36,22 +36,24 @@ void	read_folder_args(t_info *info, int argc, char **argv)
 
 void	create_root_file(t_info *info)
 {
-	if (!(info->mock_folder.files[0].name = ft_strdup(".")) ||
-		!(info->mock_folder.files[0].path_name = ft_strdup(".")))
+	if (!(((t_file*)info->mock_folder.files->content)->name = ft_strdup(".")) ||
+		!(((t_file*)info->mock_folder.files->content)->path_name = ft_strdup(".")))
 		malloc_error(info);
 }
 
 void	read_args(t_info *info)
 {
-	int	i;
+	t_list	*tmp;
 
-	i = 0;
-	while (i < info->mock_folder.length)
+	tmp = info->mock_folder.files;
+	while (tmp)
 	{
-		if (info->mock_folder.files[i].is_error == 0 &&
-			!is_hidden_root(info->mock_folder.files[i].name))
-			read_folder(info, &info->mock_folder.files[i]);
-		i++;
+//		if (info->mock_folder.files[i].is_error == 0 &&
+//			!is_hidden_root(info->mock_folder.files[i].name))
+//			read_folder(info, &info->mock_folder.files[i]);
+		if (((t_file*)tmp->content)->is_error == 0 &&
+				!is_hidden_root(((t_file*)tmp->content)->name))
+		tmp = tmp->next;
 	}
 }
 
