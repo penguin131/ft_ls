@@ -17,7 +17,7 @@ void free_data(t_info *info, t_file *file)
 	int	i;
 
 	i = 0;
-	while (file->files && i < 2)
+	while (file->files && i < file->length)
 	{
 		file->files[i].name[0] = 0;
 		file->files[i].path_name[0] = 0;
