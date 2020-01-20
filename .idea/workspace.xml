@@ -13,21 +13,13 @@
   <component name="ChangeListManager">
     <list default="true" id="3d84d632-63c9-46a7-82b0-dde20a18e17b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ft_ls" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ft_ls.dSYM/Contents/Resources/DWARF/ft_ls" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ls.dSYM/Contents/Resources/DWARF/ft_ls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inc/ft_ls.h" beforeDir="false" afterPath="$PROJECT_DIR$/inc/ft_ls.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/libft.a" beforeDir="false" afterPath="$PROJECT_DIR$/libft/libft.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/add_files.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/add_files.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/handle_error.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/handle_error.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/main.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/print_files.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/print_files.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/read_flags.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/read_flags.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/read_folders.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/read_folders.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/sorting.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/sorting.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/add_files.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/add_files.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/read_folders.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/read_folders.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sorting.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/sorting.c" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -148,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579535690823</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="names_buff05">
+      <created>1579537390028</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1579537390028</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,7 +171,8 @@
     <MESSAGE value="names_buff00" />
     <MESSAGE value="names_buff03" />
     <MESSAGE value="names_buff04" />
-    <option name="LAST_COMMIT_MESSAGE" value="names_buff04" />
+    <MESSAGE value="names_buff05" />
+    <option name="LAST_COMMIT_MESSAGE" value="names_buff05" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
