@@ -24,7 +24,12 @@
 #define T_FLAG 0b00010000
 #define REC_FL 0b00001000
 
+/**
+ * как соответствующие им константы в #include <sys/syslimits.h> - MAXNAMLEN и PATH_MAX
+ */
 #define MAX_NAME_LEN 255
+#define MAX_PATH_LEN 1024
+#define NAMES_CNT 7500
 
 #define FLAG_TYPES "alRrt"
 
@@ -41,6 +46,8 @@ typedef struct		s_file
 
 typedef struct		s_info
 {
+    char            names_pool[NAMES_CNT][MAX_PATH_LEN];
+    char            **reserved_names_pool;
 	int 			start;
 	t_file			mock_folder;
 }					t_info;
@@ -57,6 +64,6 @@ void	free_data(t_file *file);
 void	file_sorting(t_file *file);
 void	read_folder_args(t_info *info, int argc, char **argv);
 void	read_flags(t_info *info, int argc, char **argv);
-int is_hidden_root(const char *name);
+int     is_hidden_root(const char *name);
 
 #endif
