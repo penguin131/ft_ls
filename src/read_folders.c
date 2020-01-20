@@ -41,40 +41,42 @@ void	read_nested_folders(t_info *info, t_file *root)
 	}
 }
 
-int		read_file_input(t_info *info, t_file *input_file, t_file new_file, struct dirent *read_file)
+int		read_file_input(t_info *info, t_file *input_file, struct dirent *read_file)
 {
 	struct stat		buff;
+	t_file			*new_file;
 
-	ft_strcat(new_file.path_name, read_file->d_name);
-	ft_strcat(new_file.name, read_file->d_name);
-	if (stat(new_file.path_name, &buff) == -1)
-		return (-1);
-	new_file.is_folder = S_ISDIR(buff.st_mode) ? 1 : 0;
-	add_new_file(info, input_file, new_file);
+	if (!(new_file = ft_memalloc(sizeof(t_file))))
+		malloc_error(info);
+	add_new_filename(info, input_file->path_name, read_file->d_name, new_file);
+//	ft_strcat(new_file->path_name, read_file->d_name);
+//	ft_strcat(new_file.name, read_file->d_name);
+//	if (stat(new_file.path_name, &buff) == -1)
+//		return (-1);
+//	new_file.is_folder = S_ISDIR(buff.st_mode) ? 1 : 0;
+	add_new_file(info, input_file, new_file);//добавляю новый файл в динамический массив
 	return (1);
 }
 
 void    read_folder(t_info *info, t_file *input_file)
 {
 	DIR				*dir;
-	int				len;
 	struct dirent	*read_file;
 	t_file			temp_file;
 
 	if (!input_file->path_name || !(dir = opendir(input_file->path_name)))
 		return;
-	len = ft_strlen(input_file->path_name);
 	ft_bzero(&temp_file, sizeof(t_file));
 	//в цикле прохожусь по всем файлам в данной директории
 	while ((read_file = readdir(dir)))
 	{
-		if (is_hidden(read_file->d_name))
+		if (is_hidden(read_file->d_name))//если не надо читать скрытые файлы(начинающиеся с точки), то иду дальше
 			continue;
-		if (!(temp_file.path_name = ft_strnew(len + 1 + ft_strlen(read_file->d_name))))
-			malloc_error(info);
-		ft_strcat(temp_file.path_name, input_file->path_name);
-		ft_strcat(temp_file.path_name, "/");
-		if (read_file_input(info, input_file, temp_file, read_file) == -1)
+//		if (!(temp_file.path_name = ft_strnew(len + 1 + ft_strlen(read_file->d_name))))
+//			malloc_error(info);
+//		ft_strcat(temp_file.path_name, input_file->path_name);
+//		ft_strcat(temp_file.path_name, "/");
+		if (read_file_input(info, input_file, read_file) == -1)
 			continue;
 	}
 	closedir(dir);
