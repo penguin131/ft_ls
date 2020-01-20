@@ -36,10 +36,6 @@ void	read_folder_args(t_info *info, int argc, char **argv)
 
 void	create_root_file(t_info *info)
 {
-//	if (!(info->mock_folder.files[0].path_name = ft_strnew(1)))
-//		malloc_error(info);
-//	ft_strcpy(info->mock_folder.files[0].name, ".");
-//	ft_strcpy(info->mock_folder.files[0].path_name, ".");
 	if (!(info->mock_folder.files[0].name = ft_strdup(".")) ||
 		!(info->mock_folder.files[0].path_name = ft_strdup(".")))
 		malloc_error(info);
