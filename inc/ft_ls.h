@@ -29,8 +29,7 @@
  */
 #define MAX_NAME_LEN 255
 #define MAX_PATH_LEN 1024
-#define NAMES_CNT 5000
-#define MAX_POOL_INDEX NAMES_CNT - 1
+#define NAMES_CNT 2000
 
 #define FLAG_TYPES "alRrt"
 

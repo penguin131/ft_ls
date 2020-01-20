@@ -72,6 +72,8 @@ void    read_folder(t_info *info, t_file *input_file)
 			continue;
 	}
 	closedir(dir);
+	//file_sorting(input_file);
+	//print_files(info, input_file);
 	if ((flags & REC_FL) != 0)
 		read_nested_folders(info, input_file);
 	free_data(info, input_file);

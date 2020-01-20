@@ -13,13 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3d84d632-63c9-46a7-82b0-dde20a18e17b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/add_files.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/add_files.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/handle_error.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/handle_error.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/main.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/print_files.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/print_files.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/read_flags.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/read_flags.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/read_folders.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/read_folders.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ft_ls" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ft_ls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ft_ls" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ft_ls.dSYM/Contents/Resources/DWARF/ft_ls" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ls.dSYM/Contents/Resources/DWARF/ft_ls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inc/ft_ls.h" beforeDir="false" afterPath="$PROJECT_DIR$/inc/ft_ls.h" afterDir="false" />
@@ -29,7 +23,11 @@
       <change beforePath="$PROJECT_DIR$/obj/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/main.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/print_files.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/print_files.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/read_flags.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/read_flags.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/handle_error.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/handle_error.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/read_folders.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/read_folders.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/sorting.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/sorting.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/add_files.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/add_files.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/read_folders.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/read_folders.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sorting.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/sorting.c" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -143,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579533693650</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="names_buff04">
+      <created>1579535690823</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1579535690823</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,7 +171,8 @@
     <MESSAGE value="dev" />
     <MESSAGE value="names_buff00" />
     <MESSAGE value="names_buff03" />
-    <option name="LAST_COMMIT_MESSAGE" value="names_buff03" />
+    <MESSAGE value="names_buff04" />
+    <option name="LAST_COMMIT_MESSAGE" value="names_buff04" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

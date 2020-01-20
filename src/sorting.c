@@ -33,7 +33,7 @@ void	q_sort(t_file *files, int start, int end)
 	int		left;
 	int		right;
 
-	middle = files->files[(start + end) / 2];
+	middle = files->files[(start + end) >> 1];
 	left = start;
 	right = end;
 	while(left <= right)

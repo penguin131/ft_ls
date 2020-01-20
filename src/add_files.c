@@ -12,6 +12,17 @@
 
 #include "ft_ls.h"
 
+int 	check(t_info *info)//for test
+{
+	int cnt = 0;
+	for (int i = 0; i < NAMES_CNT; i++)
+	{
+		if (info->names_pool[i][0] == 0)
+			cnt++;
+	}
+	return cnt;
+}
+
 void	add_to_reserved_pool(t_info *info, const char *path, const char *name, t_file *file)
 {
 	t_list	*new_list;
@@ -30,8 +41,8 @@ void	add_to_reserved_pool(t_info *info, const char *path, const char *name, t_fi
 	ft_strcat(pool_name, name);
 	new_list->content = (void*)pool_name;
 	ft_lstpush(&info->reserved_names_pool, new_list);
-	static long int i = 0;
-	ft_printf("AaaAAAAAAAAAA----------%d------------AAAAAAAAAAAAAAAaaA\n", i++);
+	if (check(info))
+		ft_printf("AaaAAAAAAAAAA----------------------AAAAAAAAAAAAAAAaaA\n");
 }
 
 void	add_new_filename(t_info *info, const char *path, const char *name, t_file *file)
@@ -41,12 +52,12 @@ void	add_new_filename(t_info *info, const char *path, const char *name, t_file *
 
 	i = info->current_index;
 	j = 0;
-	if (info->pool_len < MAX_POOL_INDEX)//если еще влазит, то пихаю в статический пул. Иначе - пихаю в список
+	if (info->pool_len < NAMES_CNT)//если еще влазит, то пихаю в статический пул. Иначе - пихаю в список
 	{
-		while (info->names_pool[i][0] && i < MAX_POOL_INDEX)//иду до следующего свободного
+		while (info->names_pool[i][0] && i < NAMES_CNT)//иду до следующего свободного
 			i++;
-		if (i == MAX_POOL_INDEX) i = 0;
-		while (info->names_pool[i][0] && i < MAX_POOL_INDEX)
+		if (i == NAMES_CNT) i = 0;
+		while (info->names_pool[i][0] && i < info->pool_len)
 			i++;
 		file->path_name = info->names_pool[i];
 		while (path[j])
