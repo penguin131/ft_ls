@@ -44,17 +44,18 @@ void	read_nested_folders(t_info *info, t_file *root)
 int		read_file_input(t_info *info, t_file *input_file, struct dirent *read_file)
 {
 	struct stat		buff;
-	t_file			*new_file;
+	t_file			new_file;
 
-	if (!(new_file = ft_memalloc(sizeof(t_file))))
-		malloc_error(info);
-	add_new_filename(info, input_file->path_name, read_file->d_name, new_file);
+//	if (!(new_file = ft_memalloc(sizeof(t_file))))
+//		malloc_error(info);
+	ft_bzero(&new_file, sizeof(t_file));
+	add_new_filename(info, input_file->path_name, read_file->d_name, &new_file);
 //	ft_strcat(new_file->path_name, read_file->d_name);
 //	ft_strcat(new_file.name, read_file->d_name);
-//	if (stat(new_file.path_name, &buff) == -1)
-//		return (-1);
-//	new_file.is_folder = S_ISDIR(buff.st_mode) ? 1 : 0;
-	add_new_file(info, input_file, new_file);//добавляю новый файл в динамический массив
+	if (stat(new_file.path_name, &buff) == -1)
+		return (-1);
+	new_file.is_folder = S_ISDIR(buff.st_mode) ? 1 : 0;
+	add_new_file(info, input_file, &new_file);//добавляю новый файл в динамический массив
 	return (1);
 }
 
@@ -80,9 +81,9 @@ void    read_folder(t_info *info, t_file *input_file)
 			continue;
 	}
 	closedir(dir);
-	file_sorting(input_file);
-	print_files(info, input_file);
+	//file_sorting(input_file);
+	//print_files(info, input_file);
 	if ((flags & REC_FL) != 0)
 		read_nested_folders(info, input_file);
-	free_data(input_file);
+	free_data(info, input_file);
 }

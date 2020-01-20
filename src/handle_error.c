@@ -12,18 +12,20 @@
 
 #include "ft_ls.h"
 
-void	free_data(t_file *file)
+void free_data(t_info *info, t_file *file)
 {
 	int	i;
 
 	i = 0;
 	while (file->files && i < file->length)
 	{
-		ft_strdel(&file->files[i].path_name);
+		file->files[i].name[0] = 0;
+		file->files[i].path_name[0] = 0;
+		info->pool_len--;
 		if (ft_strcmp(file->files[i].name, ".") != 0
 		&& ft_strcmp(file->files[i].name, "..") != 0
 		&& file->files[i].is_folder == 1)
-			free_data(&file->files[i]);
+			free_data(info, &file->files[i]);
 		i++;
 	}
 	ft_memdel((void**)&file->files);
@@ -31,6 +33,6 @@ void	free_data(t_file *file)
 
 void	malloc_error(t_info *info)
 {
-	free_data(&info->mock_folder);
+	free_data(info, &info->mock_folder);
 	exit(0);
 }

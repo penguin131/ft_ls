@@ -49,9 +49,8 @@ typedef struct		s_info
 {
     char            names_pool[NAMES_CNT][MAX_PATH_LEN];
     t_list			*reserved_names_pool;
+    int 			current_index;
     int				pool_len;
-    int 			reserved_pool_len;
-	int 			reserved_pool_capacity;
 	int 			start;//after flags
 	t_file			mock_folder;
 }					t_info;
@@ -64,7 +63,7 @@ void	add_new_file(t_info *info, t_file *file, t_file *new_file);
 void	print_files(t_info *info, t_file *file);
 void	read_nested_folders(t_info *info, t_file *root);
 void    read_folder(t_info *info, t_file *input_file);
-void	free_data(t_file *file);
+void free_data(t_info *info, t_file *file);
 void	file_sorting(t_file *file);
 void	read_folder_args(t_info *info, int argc, char **argv);
 void	read_flags(t_info *info, int argc, char **argv);

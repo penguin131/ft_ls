@@ -23,11 +23,10 @@ void	read_folder_args(t_info *info, int argc, char **argv)
 	while (info->start < argc)
 	{
 		//прохожу по всем папкам из аргументов. Пихаю имя
-		ft_bzero(curr_file.name, MAX_NAME_LEN);
-		curr_file.is_error = 0;
-		ft_strcat(curr_file.name, argv[info->start]);
-		if (!(curr_file.path_name = ft_strdup(curr_file.name)))
+		if (!(curr_file.name = ft_strdup(argv[info->start])) ||
+			!(curr_file.path_name = ft_strdup(curr_file.name)))
 			malloc_error(info);
+		curr_file.is_error = 0;
 		if (stat(curr_file.name, &buff) == -1)
 			curr_file.is_error = 1;
 		ft_memcpy(&info->mock_folder.files[i++], &curr_file, sizeof(t_file));
@@ -37,10 +36,13 @@ void	read_folder_args(t_info *info, int argc, char **argv)
 
 void	create_root_file(t_info *info)
 {
-	if (!(info->mock_folder.files[0].path_name = ft_strnew(1)))
+//	if (!(info->mock_folder.files[0].path_name = ft_strnew(1)))
+//		malloc_error(info);
+//	ft_strcpy(info->mock_folder.files[0].name, ".");
+//	ft_strcpy(info->mock_folder.files[0].path_name, ".");
+	if (!(info->mock_folder.files[0].name = ft_strdup(".")) ||
+		!(info->mock_folder.files[0].path_name = ft_strdup(".")))
 		malloc_error(info);
-	ft_strcpy(info->mock_folder.files[0].name, ".");
-	ft_strcpy(info->mock_folder.files[0].path_name, ".");
 }
 
 void	read_args(t_info *info)
@@ -59,14 +61,25 @@ void	read_args(t_info *info)
 
 void	free_folders(t_info *info)
 {
-	int	i;
+	int		i;
+	t_list	*tmp;
+	t_list	*tmp2;
 
 	i = 0;
 	while (i < info->mock_folder.length)
 	{
 		ft_strdel(&info->mock_folder.files[i].path_name);
-		free_data(&info->mock_folder.files[i]);
+		ft_strdel(&info->mock_folder.files[i].name);
+		free_data(info, &info->mock_folder.files[i]);
 		i++;
+	}
+	tmp = info->reserved_names_pool;
+	while (tmp)
+	{
+		ft_memdel(&tmp->content);
+		tmp2 = tmp->next;
+		ft_memdel((void**)&tmp);
+		tmp = tmp2;
 	}
 }
 

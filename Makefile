@@ -10,13 +10,13 @@ SRC = $(addprefix $(S_DIR), $(FILES))
 
 OBJ = $(addprefix $(O_DIR), $(FILES:.c=.o))
 
-FLAGS = -O3
+FLAGS =
 
 all: $(NAME) libft/
 
 $(NAME) : $(OBJ)
 	make -C libft/
-	gcc -o $(NAME) $(OBJ) -Iinc -L libft libft/libftprintf.a
+	gcc -o $(NAME) $(OBJ) -Iinc libft/libft.a libft/libftprintf.a
 
 $(O_DIR)%.o:$(S_DIR)%.c inc
 	mkdir -p $(O_DIR)
