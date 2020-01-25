@@ -41,7 +41,7 @@ typedef struct		s_file
 	char 			is_error;
 	int 			length;
 	int 			capacity;
-	t_list			*files;
+	struct s_file	*files;
 }					t_file;
 
 typedef struct		s_info
@@ -63,7 +63,7 @@ void	add_new_file(t_info *info, t_file *file, t_file *new_file);
 void	print_files(t_info *info, t_file *file);
 void	read_nested_folders(t_info *info, t_file *root);
 void    read_folder(t_info *info, t_file *input_file);
-void	free_data(t_info *info, t_file *file);
+void free_data(t_info *info, t_file *file);
 void	file_sorting(t_file *file);
 void	read_folder_args(t_info *info, int argc, char **argv);
 void	read_flags(t_info *info, int argc, char **argv);
