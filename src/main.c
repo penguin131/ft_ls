@@ -36,26 +36,28 @@ void	read_folder_args(t_info *info, int argc, char **argv)
 
 void	create_root_file(t_info *info)
 {
-	if (!(info->mock_folder.files[0].name = ft_strdup(".")) ||
-		!(info->mock_folder.files[0].path_name = ft_strdup(".")))
+	if (!(((t_file*)info->mock_folder.files->content)->name = ft_strdup(".")) ||
+		!(((t_file*)info->mock_folder.files->content)->path_name = ft_strdup(".")))
 		malloc_error(info);
 }
 
 void	read_args(t_info *info)
 {
-	int	i;
+	t_list	*tmp;
 
-	i = 0;
-	while (i < info->mock_folder.length)
+	tmp = info->mock_folder.files;
+	while (tmp)
 	{
-		if (info->mock_folder.files[i].is_error == 0 &&
-			!is_hidden_root(info, info->mock_folder.files[i].name))
-			read_folder(info, &info->mock_folder.files[i]);
-		i++;
+//		if (info->mock_folder.files[i].is_error == 0 &&
+//			!is_hidden_root(info->mock_folder.files[i].name))
+//			read_folder(info, &info->mock_folder.files[i]);
+		if (((t_file*)tmp->content)->is_error == 0 &&
+				!is_hidden_root(((t_file*)tmp->content)->name))
+		tmp = tmp->next;
 	}
 }
 
-void	free_info(t_info *info)
+void	free_folders(t_info *info)
 {
 	int		i;
 	t_list	*tmp;
@@ -77,28 +79,6 @@ void	free_info(t_info *info)
 		ft_memdel((void**)&tmp);
 		tmp = tmp2;
 	}
-	i = 0;
-	while (i < NAMES_CNT)
-	{
-		ft_memdel((void**)&info->names_pool[i]);
-		i++;
-	}
-	ft_memdel((void**)&info->names_pool);
-}
-
-void	malloc_pool(t_info *info)
-{
-	int i;
-
-	if (!(info->names_pool = ft_memalloc(sizeof(char*) * NAMES_CNT)))
-	    malloc_error(info);
-	i = 0;
-	while (i < NAMES_CNT)
-    {
-		if (!(info->names_pool[i] = ft_memalloc(sizeof(char) * MAX_PATH_LEN + 1)))
-			malloc_error(info);
-		i++;
-    }
 }
 
 int     main(int argc, char **argv)
@@ -106,8 +86,7 @@ int     main(int argc, char **argv)
 	t_info	info;
 
 	ft_bzero(&info, sizeof(t_info));
-	malloc_pool(&info);
-	info.flags = 0;
+	flags = 0;
 	//читаю флаги и сдвигаю стартовый аргумент, если есть флаги
 	read_flags(&info, argc, argv);
 	info.mock_folder.length = argc - info.start > 0 ? argc - info.start : 1;
@@ -121,7 +100,7 @@ int     main(int argc, char **argv)
 	file_sorting(&info.mock_folder);
 	print_invalid_folders(&info);
 	read_args(&info);
-	free_info(&info);
+	free_folders(&info);
 	ft_memdel((void**)&info.mock_folder.files);
 	return (0);
 }
