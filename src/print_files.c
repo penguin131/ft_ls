@@ -17,7 +17,7 @@ void	print_files(t_info *info, t_file *file)
 	int	i;
 
 	i = 0;
-	if (info->mock_folder.length > 1 || (flags & REC_FL) != 0)
+	if (info->mock_folder.length > 1 || (info->flags & REC_FL) != 0)
 		ft_printf("%s:\n", file->path_name);
 	while (i < file->length)
 	{

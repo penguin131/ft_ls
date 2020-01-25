@@ -41,8 +41,8 @@ void	add_to_reserved_pool(t_info *info, const char *path, const char *name, t_fi
 	ft_strcat(pool_name, name);
 	new_list->content = (void*)pool_name;
 	ft_lstpush(&info->reserved_names_pool, new_list);
-	if (check(info))
-		ft_printf("AaaAAAAAAAAAA----------------------AAAAAAAAAAAAAAAaaA\n");
+//	if (check(info))
+//		ft_printf("AaaAAAAAAAAAA----------------------AAAAAAAAAAAAAAAaaA\n");
 }
 
 void	add_new_filename(t_info *info, const char *path, const char *name, t_file *file)
@@ -54,7 +54,7 @@ void	add_new_filename(t_info *info, const char *path, const char *name, t_file *
 	j = 0;
 	if (info->pool_len < NAMES_CNT)//если еще влазит, то пихаю в статический пул. Иначе - пихаю в список
 	{
-		while (info->names_pool[i][0] && i < NAMES_CNT)//иду до следующего свободного
+		while (i < NAMES_CNT && info->names_pool[i][0])//иду до следующего свободного
 			i++;
 		if (i == NAMES_CNT) i = 0;
 		while (info->names_pool[i][0] && i < info->pool_len)

@@ -30,15 +30,15 @@ void	read_flags(t_info *info, int argc, char **argv)
 		while (argv[info->start][j] && argv[info->start][++j])
 		{
 			if (argv[info->start][j] == 'L')
-				flags |= L_FLAG;
+				info->flags |= L_FLAG;
 			else if (argv[info->start][j] == 'a')
-				flags |= A_FLAG;
+				info->flags |= A_FLAG;
 			else if (argv[info->start][j] == 'R')
-				flags |= REC_FL;
+				info->flags |= REC_FL;
 			else if (argv[info->start][j] == 'r')
-				flags |= R_FLAG;
+				info->flags |= R_FLAG;
 			else if (argv[info->start][j] == 't')
-				flags |= T_FLAG;
+				info->flags |= T_FLAG;
 			else
 				throw_usage(argv[info->start][j]);
 		}

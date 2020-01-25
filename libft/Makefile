@@ -19,7 +19,7 @@ OFILES = ft_atoi.o ft_atoi_r.o ft_bzero.o ft_isalnum.o ft_strcut.o ft_strndup.o 
 all: $(NAME)
 
 $(NAME):
-	@gcc -Wall -Wextra -Werror -I libft.h -c $(SRC)
+	@gcc -Wall -Wextra -Werror -O3 -I libft.h -c $(SRC)
 	@ar rc $(NAME) $(OFILES)
 	@ranlib $(NAME)
 

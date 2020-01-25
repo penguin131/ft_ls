@@ -12,9 +12,9 @@
 
 #include "ft_ls.h"
 
-int 	files_comparer(t_file file1, t_file file2)
+int files_comparer(t_info *info, t_file file1, t_file file2)
 {
-	return (flags & R_FLAG) == 0 ? ft_strcmp(file1.name, file2.name) < 0 : ft_strcmp(file1.name, file2.name) > 0;
+	return (info->flags & R_FLAG) == 0 ? ft_strcmp(file1.name, file2.name) < 0 : ft_strcmp(file1.name, file2.name) > 0;
 }
 
 void	swap(t_file *file, int first, int second)
@@ -38,9 +38,9 @@ void	q_sort(t_file *files, int start, int end)
 	right = end;
 	while(left <= right)
 	{
-		while (files_comparer(files->files[left], middle))
+		while (files_comparer(NULL, files->files[left], middle))
 			left++;
-		while (files_comparer(middle, files->files[right]))
+		while (files_comparer(NULL, middle, files->files[right]))
 			right--;
 		if (left <= right)
 			swap(files, left++, right--);

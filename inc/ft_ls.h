@@ -46,15 +46,16 @@ typedef struct		s_file
 
 typedef struct		s_info
 {
-    char            names_pool[NAMES_CNT][MAX_PATH_LEN];
+    char			**names_pool;
     t_list			*reserved_names_pool;
     int 			current_index;
     int				pool_len;
 	int 			start;//after flags
 	t_file			mock_folder;
+	char			flags;
 }					t_info;
 
-unsigned char		flags;
+//unsigned char		flags;
 
 void    print_invalid_folders(t_info *info);
 void	malloc_error(t_info *info);
@@ -66,7 +67,7 @@ void free_data(t_info *info, t_file *file);
 void	file_sorting(t_file *file);
 void	read_folder_args(t_info *info, int argc, char **argv);
 void	read_flags(t_info *info, int argc, char **argv);
-int     is_hidden_root(const char *name);
+int is_hidden_root(t_info *info, const char *name);
 void	add_new_filename(t_info *info, const char *path, const char *name, t_file *file);
 
 #endif

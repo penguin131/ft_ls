@@ -12,16 +12,16 @@
 
 #include "ft_ls.h"
 
-int is_hidden_root(const char *name)
+int is_hidden_root(t_info *info, const char *name)
 {
-	if ((flags & A_FLAG) != 0)
+	if ((info->flags & A_FLAG) != 0)
 		return (0);
 	return (name[0] == '.' && name[1] != '.' && name[1] != 0);
 }
 
-int is_hidden(const char *name)
+int is_hidden(t_info *info, const char *name)
 {
-	if ((flags & A_FLAG) != 0)
+	if ((info->flags & A_FLAG) != 0)
 		return (0);
 	return (name[0] == '.');
 }
@@ -66,7 +66,7 @@ void    read_folder(t_info *info, t_file *input_file)
 	while ((read_file = readdir(dir)))
 	{
 		//если не надо читать скрытые файлы(начинающиеся с точки), то иду дальше
-		if (is_hidden(read_file->d_name))
+		if (is_hidden(info, read_file->d_name))
 			continue;
 		if (read_file_input(info, input_file, read_file) == -1)
 			continue;
@@ -74,7 +74,7 @@ void    read_folder(t_info *info, t_file *input_file)
 	closedir(dir);
 	//file_sorting(input_file);
 	//print_files(info, input_file);
-	if ((flags & REC_FL) != 0)
+	if ((info->flags & REC_FL) != 0)
 		read_nested_folders(info, input_file);
 	free_data(info, input_file);
 }
