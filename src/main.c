@@ -66,6 +66,8 @@ void	free_info(t_info *info)
 	{
 		ft_strdel(&info->mock_folder.files[i].path_name);
 		ft_strdel(&info->mock_folder.files[i].name);
+		ft_strdel(&info->mock_folder.files[i].username);
+		ft_strdel(&info->mock_folder.files[i].year);
 		free_data(info, &info->mock_folder.files[i]);
 		i++;
 	}

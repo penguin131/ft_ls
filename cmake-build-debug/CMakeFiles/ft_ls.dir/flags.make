@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu11
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/smight/Desktop/ft_ls/inc -I/Users/smight/Desktop/ft_ls/libft -I/Users/smight/Desktop/ft_ls/src 
+C_INCLUDES = -I/Users/smight/Desktop/ft_ls/inc -I/Users/smight/Desktop/ft_ls/libft -I/Users/smight/Desktop/ft_ls/printf/src 
 

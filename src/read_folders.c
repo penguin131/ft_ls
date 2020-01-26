@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <pwd.h>
+#include <grp.h>
 #include "ft_ls.h"
 
 int is_hidden_root(t_info *info, const char *name)
@@ -41,16 +43,27 @@ void	read_nested_folders(t_info *info, t_file *root)
 	}
 }
 
+//тут читаю все параметры из STAT
 int		read_file_input(t_info *info, t_file *input_file, struct dirent *read_file)
 {
 	struct stat		buff;
 	t_file			new_file;
+	struct passwd	*pw;
+	struct group	*gr;
 
 	ft_bzero(&new_file, sizeof(t_file));
 	add_new_filename(info, input_file->path_name, read_file->d_name, &new_file);
-	if (stat(new_file.path_name, &buff) == -1)
+	if (lstat(new_file.path_name, &buff) == -1)
+		return (-1);
+	if (info->flags & REC_FL && S_ISLNK(buff.st_mode))
 		return (-1);
 	new_file.is_folder = S_ISDIR(buff.st_mode) ? 1 : 0;
+	new_file.size = buff.st_size;
+	pw = getpwuid(buff.st_uid);
+	gr = getgrgid(buff.st_gid);
+	if (!(new_file.username = ft_strdup(pw->pw_name)) ||
+		!(new_file.year = ft_strdup(gr->gr_name)))
+		malloc_error(info);
 	add_new_file(info, input_file, &new_file);//добавляю новый файл в динамический массив
 	return (1);
 }
@@ -68,8 +81,7 @@ void    read_folder(t_info *info, t_file *input_file)
 		//если не надо читать скрытые файлы(начинающиеся с точки), то иду дальше
 		if (is_hidden(info, read_file->d_name))
 			continue;
-		if (read_file_input(info, input_file, read_file) == -1)
-			continue;
+		read_file_input(info, input_file, read_file);
 	}
 	closedir(dir);
     file_sorting(info, input_file);

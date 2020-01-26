@@ -22,6 +22,8 @@ void free_data(t_info *info, t_file *file)
 		file->files[i].name[0] = 0;
 		file->files[i].path_name[0] = 0;
 		info->pool_len--;
+		ft_strdel(&file->files[i].username);
+		ft_strdel(&file->files[i].year);
 		if (ft_strcmp(file->files[i].name, ".") != 0
 		&& ft_strcmp(file->files[i].name, "..") != 0
 		&& file->files[i].is_folder == 1)

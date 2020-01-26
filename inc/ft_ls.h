@@ -28,10 +28,10 @@
 /**
  * как соответствующие им константы в #include <sys/syslimits.h> - MAXNAMLEN и PATH_MAX
  */
+
 #define MAX_NAME_LEN 255
 #define MAX_PATH_LEN 1024
 #define NAMES_CNT 5000
-
 #define FLAG_TYPES "alRrt"
 
 typedef struct		s_file
@@ -42,6 +42,9 @@ typedef struct		s_file
 	char 			is_error;
 	int 			length;
 	int 			capacity;
+	off_t			size;
+	char			*username;
+	char			*year;
 	struct s_file	*files;
 }					t_file;
 
@@ -68,7 +71,7 @@ void free_data(t_info *info, t_file *file);
 void file_sorting(t_info *info, t_file *file);
 void	read_folder_args(t_info *info, int argc, char **argv);
 void	read_flags(t_info *info, int argc, char **argv);
-int is_hidden_root(t_info *info, const char *name);
+int		is_hidden_root(t_info *info, const char *name);
 void	add_new_filename(t_info *info, const char *path, const char *name, t_file *file);
 
 #endif
