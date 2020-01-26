@@ -27,7 +27,7 @@ void	swap(t_file *file, int first, int second)
 	ft_memcpy(&file->files[second], &tmp, sizeof(t_file));
 }
 
-void	q_sort(t_file *files, int start, int end)
+void q_sort(t_info *info, t_file *files, int start, int end)
 {
 	t_file	middle;
 	int		left;
@@ -38,21 +38,21 @@ void	q_sort(t_file *files, int start, int end)
 	right = end;
 	while(left <= right)
 	{
-		while (files_comparer(NULL, files->files[left], middle))
+		while (files_comparer(info, files->files[left], middle))
 			left++;
-		while (files_comparer(NULL, middle, files->files[right]))
+		while (files_comparer(info, middle, files->files[right]))
 			right--;
 		if (left <= right)
 			swap(files, left++, right--);
 	}
 	if (right > start)
-		q_sort(files, start, right);
+        q_sort(info, files, start, right);
 	if (left < end)
-		q_sort(files, left, end);
+        q_sort(info, files, left, end);
 }
 
-void	file_sorting(t_file *file)
+void file_sorting(t_info *info, t_file *file)
 {
 	if (file->length > 1)
-		q_sort(file, 0, file->length - 1);
+        q_sort(info, file, 0, file->length - 1);
 }

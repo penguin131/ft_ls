@@ -84,6 +84,7 @@ void	free_info(t_info *info)
 		i++;
 	}
 	ft_memdel((void**)&info->names_pool);
+	ft_memdel((void**)&result.buff);
 }
 
 void	malloc_pool(t_info *info)
@@ -99,6 +100,11 @@ void	malloc_pool(t_info *info)
 			malloc_error(info);
 		i++;
     }
+	/**
+	 * malloc buffer! need free.
+	 */
+	 if (!(result.buff = ft_memalloc(sizeof(char) * BUFF_SIZE_P)))
+	     malloc_error(info);
 }
 
 int     main(int argc, char **argv)
@@ -118,9 +124,10 @@ int     main(int argc, char **argv)
 		create_root_file(&info);
 	else
 		read_folder_args(&info, argc, argv);
-	file_sorting(&info.mock_folder);
+    file_sorting(&info, &info.mock_folder);
 	print_invalid_folders(&info);
 	read_args(&info);
+    print_buffer(-1);
 	free_info(&info);
 	ft_memdel((void**)&info.mock_folder.files);
 	return (0);

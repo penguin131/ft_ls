@@ -14,6 +14,7 @@
 #define FT_LS_H
 
 #include "../libft/libft.h"
+#include "../printf/src/ft_printf.h"
 #include <dirent.h>
 #include <sys/stat.h>
 #include "ft_ls.h"
@@ -64,7 +65,7 @@ void	print_files(t_info *info, t_file *file);
 void	read_nested_folders(t_info *info, t_file *root);
 void    read_folder(t_info *info, t_file *input_file);
 void free_data(t_info *info, t_file *file);
-void	file_sorting(t_file *file);
+void file_sorting(t_info *info, t_file *file);
 void	read_folder_args(t_info *info, int argc, char **argv);
 void	read_flags(t_info *info, int argc, char **argv);
 int is_hidden_root(t_info *info, const char *name);

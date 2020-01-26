@@ -12,22 +12,29 @@ OBJ = $(addprefix $(O_DIR), $(FILES:.c=.o))
 
 FLAGS = -O3
 
-all: $(NAME) libft/
+LIB = libft/libft.a
+
+PRINTF = printf/libftprintf.a
+
+all: $(NAME) libft/ printf/
 
 $(NAME) : $(OBJ)
-	make -C libft/
-	gcc -o $(NAME) $(FLAGS) $(OBJ) -Iinc libft/libft.a libft/libftprintf.a
+	@make -C libft/
+	@make -C printf/
+	@gcc -o $(NAME) $(FLAGS) $(OBJ) -Iinc $(LIB) $(PRINTF)
 
 $(O_DIR)%.o:$(S_DIR)%.c inc/
-	mkdir -p $(O_DIR)
-	gcc $(FLAGS) -Iinc -o $@ -c $<
+	@mkdir -p $(O_DIR)
+	@gcc $(FLAGS) -Iinc -o $@ -c $<
 
 clean:
-	make clean -C libft/
-	rm -rf $(O_DIR)
+	@make clean -C libft/
+	@make clean -C printf/
+	@rm -rf $(O_DIR)
 
 fclean: clean
-	make fclean -C libft/
-	rm -f $(NAME)
+	@make fclean -C libft/
+	@make fclean -C printf/
+	@rm -f $(NAME)
 
 re: fclean all

@@ -22,6 +22,7 @@ $(NAME):
 	@gcc -Wall -Wextra -Werror -O3 -I libft.h -c $(SRC)
 	@ar rc $(NAME) $(OFILES)
 	@ranlib $(NAME)
+	@echo "libft OK!"
 
 clean:
 	@/bin/rm -f $(OFILES)
