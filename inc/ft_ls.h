@@ -45,6 +45,8 @@ typedef struct		s_file
 	off_t			size;
 	char			*username;
 	char			*year;
+	unsigned long	st_mode;
+	time_t			time;
 	struct s_file	*files;
 }					t_file;
 
@@ -73,5 +75,16 @@ void	read_folder_args(t_info *info, int argc, char **argv);
 void	read_flags(t_info *info, int argc, char **argv);
 int		is_hidden_root(t_info *info, const char *name);
 void	add_new_filename(t_info *info, const char *path, const char *name, t_file *file);
+
+static char		get_chmod[7][4] = {
+		"---",
+		"--x",
+		"-w-",
+		"-wx",
+		"r--",
+		"r--",
+		"rw-",
+		"rwx"
+};
 
 #endif

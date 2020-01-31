@@ -12,6 +12,7 @@
 
 #include <pwd.h>
 #include <grp.h>
+#include <sys/time.h>
 #include "ft_ls.h"
 
 int is_hidden_root(t_info *info, const char *name)
@@ -58,7 +59,9 @@ int		read_file_input(t_info *info, t_file *input_file, struct dirent *read_file)
 	if (info->flags & REC_FL && S_ISLNK(buff.st_mode))
 		return (-1);
 	new_file.is_folder = S_ISDIR(buff.st_mode) ? 1 : 0;
-	new_file.size = buff.st_size;
+	new_file.st_mode = buff.st_mode;//1 строчка??
+	new_file.size = buff.st_size;//5 строчка
+	new_file.time = time(buff);//5 строчка
 	pw = getpwuid(buff.st_uid);
 	gr = getgrgid(buff.st_gid);
 	if (!(new_file.username = ft_strdup(pw->pw_name)) ||
