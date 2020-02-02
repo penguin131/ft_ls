@@ -10,7 +10,7 @@ SRC = $(addprefix $(S_DIR), $(FILES))
 
 OBJ = $(addprefix $(O_DIR), $(FILES:.c=.o))
 
-FLAGS = -O3
+FLAGS =
 
 LIB = libft/libft.a
 

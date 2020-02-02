@@ -13,6 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3d84d632-63c9-46a7-82b0-dde20a18e17b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/C.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/add_files.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/add_files.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/handle_error.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/handle_error.c.o" afterDir="false" />
@@ -25,11 +26,15 @@
       <change beforePath="$PROJECT_DIR$/ft_ls" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inc/ft_ls.h" beforeDir="false" afterPath="$PROJECT_DIR$/inc/ft_ls.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libft/libft.a" beforeDir="false" afterPath="$PROJECT_DIR$/libft/libft.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/add_files.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/add_files.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/handle_error.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/handle_error.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/main.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/print_files.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/print_files.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/read_flags.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/read_flags.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/read_folders.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/read_folders.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/sorting.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/sorting.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/printf/libftprintf.a" beforeDir="false" afterPath="$PROJECT_DIR$/printf/libftprintf.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/print_files.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/print_files.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/read_flags.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/read_flags.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/read_folders.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/read_folders.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -129,7 +134,7 @@
       <workItem from="1579511159206" duration="15322000" />
       <workItem from="1579965674198" duration="406000" />
       <workItem from="1580032182892" duration="9454000" />
-      <workItem from="1580667964296" duration="7419000" />
+      <workItem from="1580667964296" duration="8564000" />
     </task>
     <task id="LOCAL-00001" summary="dev">
       <created>1579512703465</created>
@@ -180,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580668809112</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="ls -l 01">
+      <created>1580676387308</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1580676387308</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,33 +218,34 @@
     <MESSAGE value="names_buff04" />
     <MESSAGE value="names_buff05" />
     <MESSAGE value="links" />
-    <option name="LAST_COMMIT_MESSAGE" value="links" />
+    <MESSAGE value="ls -l 01" />
+    <option name="LAST_COMMIT_MESSAGE" value="ls -l 01" />
   </component>
   <component name="WindowStateProjectService">
     <state x="360" y="222" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580670366417">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="360" y="222" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1580670366417" />
-    <state x="479" y="162" key="CommitChangelistDialog2" timestamp="1580668808608">
+    <state x="479" y="162" key="CommitChangelistDialog2" timestamp="1580676387133">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="479" y="162" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1580668808608" />
-    <state width="1750" height="377" key="GridCell.Tab.0.bottom" timestamp="1580676323138">
+    <state x="479" y="162" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1580676387133" />
+    <state width="1750" height="367" key="GridCell.Tab.0.bottom" timestamp="1580677515146">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="377" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1580676323138" />
-    <state width="1750" height="377" key="GridCell.Tab.0.center" timestamp="1580676323137">
+    <state width="1750" height="367" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1580677515146" />
+    <state width="1750" height="367" key="GridCell.Tab.0.center" timestamp="1580677515145">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="377" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1580676323137" />
-    <state width="1750" height="377" key="GridCell.Tab.0.left" timestamp="1580676323136">
+    <state width="1750" height="367" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1580677515145" />
+    <state width="1750" height="367" key="GridCell.Tab.0.left" timestamp="1580677515144">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="377" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1580676323136" />
-    <state width="1750" height="377" key="GridCell.Tab.0.right" timestamp="1580676323138">
+    <state width="1750" height="367" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1580677515144" />
+    <state width="1750" height="367" key="GridCell.Tab.0.right" timestamp="1580677515146">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="377" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1580676323138" />
+    <state width="1750" height="367" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1580677515146" />
     <state width="1750" height="289" key="GridCell.Tab.1.bottom" timestamp="1580676183967">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -253,10 +266,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="397" y="199" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1580668088965" />
-    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1580668817566">
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1580676396118">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="496" y="300" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1580668817566" />
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1580676396118" />
     <state x="573" y="392" key="com.intellij.ide.util.TipDialog" timestamp="1580667964773">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>

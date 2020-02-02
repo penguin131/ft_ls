@@ -12,6 +12,7 @@
 
 #include <time.h>
 #include "ft_ls.h"
+# include <sys/xattr.h>
 
 void    print_file_type(unsigned long st_mode)
 {
@@ -77,13 +78,18 @@ void    print_l(t_info *info, t_file *file)
     int	i;
 
     i = 0;
-    ft_printf("total:%d\n", 5);
+    if (file->length > 0)
+        ft_printf("total:%d\n", file->total_n_link);
     while (i < file->length)
     {
         print_file_type(file->files[i].st_mode);
         print_file_chmod(file->files[i].st_mode);
-        //print_@ TODO
-        ft_printf("%5d %s  %s", file->files[i].n_link, file->files[i].username, file->files[i].year);
+        if ((listxattr(file->files[i].path_name, NULL, 0, XATTR_NOFOLLOW) > 0) ||
+            (listxattr(file->files[i].path_name, NULL, 0, 0) > 0))
+            ft_printf("@");
+        else
+            ft_printf(" ");
+        ft_printf("%4d %s  %s", file->files[i].n_link, file->files[i].username, file->files[i].year);
         ft_printf(" %6d ", file->files[i].size);
         print_time(info, file->files[i].time);
         ft_printf(" %s\n", file->files[i].name);

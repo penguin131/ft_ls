@@ -39,4 +39,6 @@ time.h
 -
 ft_ls.h
 /Users/bootcamp/Desktop/C/ft_ls/src/ft_ls.h
+sys/xattr.h
+-
 

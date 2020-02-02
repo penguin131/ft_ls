@@ -41,8 +41,8 @@ typedef struct		s_file
 	char			*username;
 	char			*year;
 	unsigned long	st_mode;
-	unsigned long	st_rdev;
 	unsigned long	n_link;
+	unsigned long	total_n_link;
 	time_t			time;
 	struct s_file	*files;
 }					t_file;
