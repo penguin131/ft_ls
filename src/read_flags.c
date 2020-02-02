@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <time.h>
 #include "ft_ls.h"
 
 void	throw_usage(char c)
@@ -29,7 +30,7 @@ void	read_flags(t_info *info, int argc, char **argv)
 		j = 0;
 		while (argv[info->start][j] && argv[info->start][++j])
 		{
-			if (argv[info->start][j] == 'L')
+			if (argv[info->start][j] == 'l')
 				info->flags |= L_FLAG;
 			else if (argv[info->start][j] == 'a')
 				info->flags |= A_FLAG;
@@ -45,4 +46,23 @@ void	read_flags(t_info *info, int argc, char **argv)
 		(info->start)++;
 	}
 //	info->start = 1;
+}
+
+char	*get_string_time(t_info *info, time_t *c_time)
+{
+	char	*result;
+	char	*str;
+	time_t	now_clock;
+
+	str = ctime(c_time);
+	now_clock = time(0);
+	if ((info->flags & T_FLAG) != 0)
+		result = ft_strsub(str, 4, ft_strlen(str + 4) - 1);
+	else
+	{
+		result = ft_strsub(str, 4, 12);
+		if (now_clock < *c_time || now_clock - *c_time > 15724800)
+			ft_memcpy(result + 7, str + 19, 5);
+	}
+	return (result);
 }
