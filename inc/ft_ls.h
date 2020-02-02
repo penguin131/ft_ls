@@ -13,11 +13,15 @@
 #ifndef FT_LS_H
 #define FT_LS_H
 
+#include "ft_ls.h"
 #include "../libft/libft.h"
 #include "../printf/src/ft_printf.h"
-#include <dirent.h>
+
 #include <sys/stat.h>
-#include "ft_ls.h"
+#include <sys/xattr.h>
+
+#include <dirent.h>
+#include <time.h>
 
 #define R_FLAG 0b10000000
 #define L_FLAG 0b01000000
@@ -37,7 +41,7 @@ typedef struct		s_file
 	char 			is_error;
 	int 			length;
 	int 			capacity;
-	off_t			size;
+	int				size;
 	char			*username;
 	char			*year;
 	unsigned long	st_mode;
@@ -59,8 +63,6 @@ typedef struct		s_info
 	char			is_not_first;
 }					t_info;
 
-//unsigned char		flags;
-
 void    print_invalid_folders(t_info *info);
 void	malloc_error(t_info *info);
 void	add_new_file(t_info *info, t_file *file, t_file *new_file);
@@ -73,19 +75,5 @@ void	read_folder_args(t_info *info, int argc, char **argv);
 void	read_flags(t_info *info, int argc, char **argv);
 int		is_hidden_root(t_info *info, const char *name);
 void	add_new_filename(t_info *info, const char *path, const char *name, t_file *file);
-char	*get_string_time(t_info *info, time_t *c_time);
-
-static char		get_chmod[8][4] = {
-		"---",
-		"--x",
-		"-w-",
-		"-wx",
-		"r--",
-		"r--",
-		"rw-",
-		"rwx"
-};
-
-static char		chmod_str[10] = "rwxrwxrwx";
 
 #endif

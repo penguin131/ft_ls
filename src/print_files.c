@@ -10,9 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <time.h>
 #include "ft_ls.h"
-# include <sys/xattr.h>
 
 void    print_file_type(unsigned long st_mode)
 {
@@ -79,12 +77,12 @@ void    print_l(t_info *info, t_file *file)
 
     i = 0;
     if (file->length > 0)
-        ft_printf("total:%d\n", file->total_n_link);
+        ft_printf("total %d\n", file->total_n_link);
     while (i < file->length)
     {
         print_file_type(file->files[i].st_mode);
         print_file_chmod(file->files[i].st_mode);
-        if ((listxattr(file->files[i].path_name, NULL, 0, XATTR_NOFOLLOW) > 0) ||
+        if ((S_ISLNK(file->files[i].st_mode) && listxattr(file->files[i].path_name, NULL, 0, XATTR_NOFOLLOW) > 0) ||
             (listxattr(file->files[i].path_name, NULL, 0, 0) > 0))
             ft_printf("@");
         else
@@ -104,8 +102,9 @@ void	print_files(t_info *info, t_file *file)
     {
 	    if (info->is_not_first != 0)
             ft_printf("\n");
-        info->is_not_first = 1;
-        ft_printf("%s:\n", file->path_name);
+        if (info->mock_folder.length > 1 || info->is_not_first != 0)
+        	ft_printf("%s:\n", file->path_name);
+		info->is_not_first = 1;
     }
 	if ((info->flags & L_FLAG) != 0)
 	    print_l(info, file);

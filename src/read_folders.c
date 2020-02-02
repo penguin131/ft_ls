@@ -38,7 +38,8 @@ void	read_nested_folders(t_info *info, t_file *root)
 	{
 		if (root->files[i].is_folder == 1 &&\
 			ft_strcmp(root->files[i].name, ".") != 0 &&\
-			ft_strcmp(root->files[i].name, "..") != 0)
+			ft_strcmp(root->files[i].name, "..") != 0 &&\
+			!S_ISLNK(root->files[i].st_mode))
 			read_folder(info, &root->files[i]);
 		i++;
 	}
@@ -56,14 +57,12 @@ int		read_file_input(t_info *info, t_file *input_file, struct dirent *read_file)
 	add_new_filename(info, input_file->path_name, read_file->d_name, &new_file);
 	if (lstat(new_file.path_name, &buff) == -1)
 		return (-1);
-	if (info->flags & REC_FL && S_ISLNK(buff.st_mode))
-		return (-1);
 	new_file.is_folder = S_ISDIR(buff.st_mode) ? 1 : 0;
-	new_file.st_mode = buff.st_mode;//1 строчка??
-	new_file.size = buff.st_size;//5 строчка
+	new_file.st_mode = buff.st_mode;
+	new_file.size = buff.st_size;
     new_file.n_link = buff.st_nlink;
     input_file->total_n_link += buff.st_blocks;
-	new_file.time = buff.st_atime;//5 строчка
+	new_file.time = buff.st_atime;
 	pw = getpwuid(buff.st_uid);
 	gr = getgrgid(buff.st_gid);
 	if (!(new_file.username = ft_strdup(pw->pw_name)) ||
