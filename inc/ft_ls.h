@@ -58,7 +58,7 @@ typedef struct		s_info
     int				pool_len;
 	int 			start;//after flags
 	t_file			mock_folder;
-	char			flags;
+	unsigned char	flags;
 }					t_info;
 
 //unsigned char		flags;
@@ -76,7 +76,7 @@ void	read_flags(t_info *info, int argc, char **argv);
 int		is_hidden_root(t_info *info, const char *name);
 void	add_new_filename(t_info *info, const char *path, const char *name, t_file *file);
 
-static char		get_chmod[7][4] = {
+static char		get_chmod[8][4] = {
 		"---",
 		"--x",
 		"-w-",
