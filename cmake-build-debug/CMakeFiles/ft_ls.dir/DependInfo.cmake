@@ -91,6 +91,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/bootcamp/Desktop/C/ft_ls/src/handle_error.c" "/Users/bootcamp/Desktop/C/ft_ls/cmake-build-debug/CMakeFiles/ft_ls.dir/src/handle_error.c.o"
   "/Users/bootcamp/Desktop/C/ft_ls/src/main.c" "/Users/bootcamp/Desktop/C/ft_ls/cmake-build-debug/CMakeFiles/ft_ls.dir/src/main.c.o"
   "/Users/bootcamp/Desktop/C/ft_ls/src/print_files.c" "/Users/bootcamp/Desktop/C/ft_ls/cmake-build-debug/CMakeFiles/ft_ls.dir/src/print_files.c.o"
+  "/Users/bootcamp/Desktop/C/ft_ls/src/print_l.c" "/Users/bootcamp/Desktop/C/ft_ls/cmake-build-debug/CMakeFiles/ft_ls.dir/src/print_l.c.o"
   "/Users/bootcamp/Desktop/C/ft_ls/src/read_flags.c" "/Users/bootcamp/Desktop/C/ft_ls/cmake-build-debug/CMakeFiles/ft_ls.dir/src/read_flags.c.o"
   "/Users/bootcamp/Desktop/C/ft_ls/src/read_folders.c" "/Users/bootcamp/Desktop/C/ft_ls/cmake-build-debug/CMakeFiles/ft_ls.dir/src/read_folders.c.o"
   "/Users/bootcamp/Desktop/C/ft_ls/src/sorting.c" "/Users/bootcamp/Desktop/C/ft_ls/cmake-build-debug/CMakeFiles/ft_ls.dir/src/sorting.c.o"

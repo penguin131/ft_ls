@@ -2472,6 +2472,33 @@ src/print_files.c.s:
 	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/print_files.c.s
 .PHONY : src/print_files.c.s
 
+src/print_l.o: src/print_l.c.o
+
+.PHONY : src/print_l.o
+
+# target to build an object file
+src/print_l.c.o:
+	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/print_l.c.o
+.PHONY : src/print_l.c.o
+
+src/print_l.i: src/print_l.c.i
+
+.PHONY : src/print_l.i
+
+# target to preprocess a source file
+src/print_l.c.i:
+	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/print_l.c.i
+.PHONY : src/print_l.c.i
+
+src/print_l.s: src/print_l.c.s
+
+.PHONY : src/print_l.s
+
+# target to generate assembly for a file
+src/print_l.c.s:
+	$(MAKE) -f CMakeFiles/ft_ls.dir/build.make CMakeFiles/ft_ls.dir/src/print_l.c.s
+.PHONY : src/print_l.c.s
+
 src/read_flags.o: src/read_flags.c.o
 
 .PHONY : src/read_flags.o
@@ -2823,6 +2850,9 @@ help:
 	@echo "... src/print_files.o"
 	@echo "... src/print_files.i"
 	@echo "... src/print_files.s"
+	@echo "... src/print_l.o"
+	@echo "... src/print_l.i"
+	@echo "... src/print_l.s"
 	@echo "... src/read_flags.o"
 	@echo "... src/read_flags.i"
 	@echo "... src/read_flags.s"

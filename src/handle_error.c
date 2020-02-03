@@ -26,7 +26,7 @@ void free_data(t_info *info, t_file *file)
 		ft_strdel(&file->files[i].year);
 		if (ft_strcmp(file->files[i].name, ".") != 0
 		&& ft_strcmp(file->files[i].name, "..") != 0
-		&& file->files[i].is_folder == 1)
+		&& S_ISDIR(file->files[i].st_mode))
 			free_data(info, &file->files[i]);
 		i++;
 	}

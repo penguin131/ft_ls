@@ -39,7 +39,6 @@ typedef struct		s_file
 {
 	char 			*name;
 	char			*path_name;
-	char			is_folder;
 	char 			is_error;
 	int 			length;
 	int 			capacity;
@@ -79,5 +78,6 @@ void	read_folder_args(t_info *info, int argc, char **argv);
 void	read_flags(t_info *info, int argc, char **argv);
 int		is_hidden_root(t_info *info, const char *name);
 void	add_new_filename(t_info *info, const char *path, const char *name, t_file *file);
+void    print_l(t_info *info, t_file *file);
 
 #endif

@@ -100,4 +100,4 @@ add_executable(ft_ls
         src/print_files.c
         src/read_flags.c
         src/read_folders.c
-        src/sorting.c)
+        src/sorting.c src/print_l.c)

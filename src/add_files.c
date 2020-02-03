@@ -12,17 +12,6 @@
 
 #include "ft_ls.h"
 
-int 	check(t_info *info)//for test
-{
-	int cnt = 0;
-	for (int i = 0; i < NAMES_CNT; i++)
-	{
-		if (info->names_pool[i][0] == 0)
-			cnt++;
-	}
-	return cnt;
-}
-
 void	add_to_reserved_pool(t_info *info, const char *path, const char *name, t_file *file)
 {
 	t_list	*new_list;
@@ -41,8 +30,6 @@ void	add_to_reserved_pool(t_info *info, const char *path, const char *name, t_fi
 	ft_strcat(pool_name, name);
 	new_list->content = (void*)pool_name;
 	ft_lstpush(&info->reserved_names_pool, new_list);
-//	if (check(info))
-//		ft_printf("AaaAAAAAAAAAA----------------------AAAAAAAAAAAAAAAaaA\n");
 }
 
 void	add_new_filename(t_info *info, const char *path, const char *name, t_file *file)

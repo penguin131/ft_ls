@@ -12,8 +12,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d84d632-63c9-46a7-82b0-dde20a18e17b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/print_l.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/add_files.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/add_files.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/handle_error.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/handle_error.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/main.c.o" afterDir="false" />
@@ -21,7 +34,10 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/read_flags.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/read_flags.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/read_folders.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/read_folders.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/sorting.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/sorting.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/ft_ls" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ft_ls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ft_ls.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ft_ls.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ft_ls" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inc/ft_ls.h" beforeDir="false" afterPath="$PROJECT_DIR$/inc/ft_ls.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libft/libft.a" beforeDir="false" afterPath="$PROJECT_DIR$/libft/libft.a" afterDir="false" />
@@ -29,10 +45,10 @@
       <change beforePath="$PROJECT_DIR$/obj/handle_error.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/handle_error.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/main.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/print_files.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/print_files.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/read_flags.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/read_flags.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/read_folders.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/read_folders.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/sorting.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/sorting.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/printf/libftprintf.a" beforeDir="false" afterPath="$PROJECT_DIR$/printf/libftprintf.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/add_files.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/add_files.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/handle_error.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/handle_error.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/print_files.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/print_files.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/read_folders.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/read_folders.c" afterDir="false" />
     </list>
@@ -133,7 +149,7 @@
       <workItem from="1579511159206" duration="15322000" />
       <workItem from="1579965674198" duration="406000" />
       <workItem from="1580032182892" duration="9454000" />
-      <workItem from="1580667964296" duration="12836000" />
+      <workItem from="1580667964296" duration="14694000" />
     </task>
     <task id="LOCAL-00001" summary="dev">
       <created>1579512703465</created>
@@ -205,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580679863737</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="ls -l links fix">
+      <created>1580696714616</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1580696714616</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,26 +264,26 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="360" y="222" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1580695090031" />
-    <state x="479" y="162" key="CommitChangelistDialog2" timestamp="1580679863556">
+    <state x="479" y="162" key="CommitChangelistDialog2" timestamp="1580696714427">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="479" y="162" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1580679863556" />
-    <state width="1750" height="243" key="GridCell.Tab.0.bottom" timestamp="1580696566723">
+    <state x="479" y="162" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1580696714427" />
+    <state width="1750" height="243" key="GridCell.Tab.0.bottom" timestamp="1580698588531">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="243" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1580696566723" />
-    <state width="1750" height="243" key="GridCell.Tab.0.center" timestamp="1580696566722">
+    <state width="1750" height="243" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1580698588531" />
+    <state width="1750" height="243" key="GridCell.Tab.0.center" timestamp="1580698588530">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="243" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1580696566722" />
-    <state width="1750" height="243" key="GridCell.Tab.0.left" timestamp="1580696566721">
+    <state width="1750" height="243" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1580698588530" />
+    <state width="1750" height="243" key="GridCell.Tab.0.left" timestamp="1580698588529">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="243" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1580696566721" />
-    <state width="1750" height="243" key="GridCell.Tab.0.right" timestamp="1580696566722">
+    <state width="1750" height="243" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1580698588529" />
+    <state width="1750" height="243" key="GridCell.Tab.0.right" timestamp="1580698588530">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="243" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1580696566722" />
+    <state width="1750" height="243" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1580698588530" />
     <state width="1750" height="353" key="GridCell.Tab.1.bottom" timestamp="1580695391589">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -281,14 +304,18 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="397" y="199" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1580668088965" />
-    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1580679871609">
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1580696724727">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="496" y="300" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1580679871609" />
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1580696724727" />
     <state x="573" y="392" key="com.intellij.ide.util.TipDialog" timestamp="1580667964773">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="573" y="392" key="com.intellij.ide.util.TipDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1580667964773" />
+    <state x="554" y="317" width="683" height="486" key="find.popup" timestamp="1580697641877">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="554" y="317" width="683" height="486" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1580697641877" />
     <state x="642" y="280" key="git4idea.branch.GitSmartOperationDialog" timestamp="1580536860025">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>

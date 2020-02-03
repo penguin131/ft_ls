@@ -284,6 +284,11 @@ CMakeFiles/ft_ls.dir/src/print_files.c.o
  ../libft/libft.h
  ../printf/src/ft_printf.h
  /Users/bootcamp/Desktop/C/ft_ls/src/print_files.c
+CMakeFiles/ft_ls.dir/src/print_l.c.o
+ ../inc/ft_ls.h
+ ../libft/libft.h
+ ../printf/src/ft_printf.h
+ /Users/bootcamp/Desktop/C/ft_ls/src/print_l.c
 CMakeFiles/ft_ls.dir/src/read_flags.c.o
  ../inc/ft_ls.h
  ../libft/libft.h
