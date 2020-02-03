@@ -10,10 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <pwd.h>
-#include <grp.h>
-#include <sys/time.h>
 #include "ft_ls.h"
+
+short		long_capacity(unsigned long x)
+{
+	unsigned long p;
+	short	i;
+
+	p = 10;
+	i = 1;
+	while (i < 19)
+	{
+		if (x < p)
+			return (i);
+		p = 10 * p;
+		i++;
+	}
+	return 19;
+}
 
 int is_hidden_root(t_info *info, const char *name)
 {
@@ -62,11 +76,15 @@ int		read_file_input(t_info *info, t_file *input_file, struct dirent *read_file)
 	new_file.size = buff.st_size;
     new_file.n_link = buff.st_nlink;
     input_file->total_n_link += buff.st_blocks;
+    if (long_capacity(buff.st_nlink) > input_file->max_n_link_len)
+    	input_file->max_n_link_len = long_capacity(buff.st_nlink);
+    if (long_capacity(new_file.size) > input_file->max_size_len)
+    	input_file->max_size_len = long_capacity(new_file.size);
 	new_file.time = buff.st_atime;
 	pw = getpwuid(buff.st_uid);
 	gr = getgrgid(buff.st_gid);
-	if (!(new_file.username = ft_strdup(pw->pw_name)) ||
-		!(new_file.year = ft_strdup(gr->gr_name)))
+	if ( (pw && !(new_file.username = ft_strdup(pw->pw_name))) ||
+		(gr && !(new_file.year = ft_strdup(gr->gr_name))))
 		malloc_error(info);
 	add_new_file(info, input_file, &new_file);//добавляю новый файл в динамический массив
 	return (1);

@@ -7,16 +7,24 @@
 #IncludeRegexTransform: 
 
 ../inc/ft_ls.h
-../libft/libft.h
-../libft/libft.h
-../printf/src/ft_printf.h
-../printf/src/ft_printf.h
-dirent.h
--
-sys/stat.h
--
 ft_ls.h
 ../inc/ft_ls.h
+../libft/libft.h
+../libft/libft.h
+../printf/src/ft_printf.h
+../printf/src/ft_printf.h
+sys/stat.h
+-
+sys/xattr.h
+-
+dirent.h
+-
+time.h
+-
+pwd.h
+-
+grp.h
+-
 
 ../libft/libft.h
 string.h
@@ -34,11 +42,7 @@ unistd.h
 ../../libft/libft.h
 ../libft/libft.h
 
-/Users/bootcamp/Desktop/C/ft_ls/src/print_files.c
-time.h
--
+/Users/bootcamp/Desktop/C/ft_ls/src/read_folders.c
 ft_ls.h
 /Users/bootcamp/Desktop/C/ft_ls/src/ft_ls.h
-sys/xattr.h
--
 

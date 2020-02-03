@@ -87,13 +87,12 @@ void    print_l(t_info *info, t_file *file)
             ft_printf("@");
         else
             ft_printf(" ");
-        ft_printf("%4d %s  %s", file->files[i].n_link, file->files[i].username, file->files[i].year);
-        ft_printf(" %6d ", file->files[i].size);
+        ft_printf("%*d %s  %s", file->max_n_link_len + 1, file->files[i].n_link, file->files[i].username, file->files[i].year);
+        ft_printf(" %*d ", file->max_size_len + 1, file->files[i].size);
         print_time(info, file->files[i].time);
         ft_printf(" %s\n", file->files[i].name);
         i++;
     }
-//    ft_printf("\n");
 }
 
 void	print_files(t_info *info, t_file *file)

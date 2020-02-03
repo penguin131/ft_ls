@@ -22,6 +22,8 @@
 
 #include <dirent.h>
 #include <time.h>
+#include <pwd.h>
+#include <grp.h>
 
 #define R_FLAG 0b10000000
 #define L_FLAG 0b01000000
@@ -47,6 +49,8 @@ typedef struct		s_file
 	unsigned long	st_mode;
 	unsigned long	n_link;
 	unsigned long	total_n_link;
+	short			max_n_link_len;
+	short			max_size_len;
 	time_t			time;
 	struct s_file	*files;
 }					t_file;
