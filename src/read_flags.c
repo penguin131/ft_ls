@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <time.h>
 #include "ft_ls.h"
 
 void	throw_usage(char c)
@@ -29,16 +30,16 @@ void	read_flags(t_info *info, int argc, char **argv)
 		j = 0;
 		while (argv[info->start][j] && argv[info->start][++j])
 		{
-			if (argv[info->start][j] == 'L')
-				flags |= L_FLAG;
+			if (argv[info->start][j] == 'l')
+				info->flags |= L_FLAG;
 			else if (argv[info->start][j] == 'a')
-				flags |= A_FLAG;
+				info->flags |= A_FLAG;
 			else if (argv[info->start][j] == 'R')
-				flags |= REC_FL;
+				info->flags |= REC_FL;
 			else if (argv[info->start][j] == 'r')
-				flags |= R_FLAG;
+				info->flags |= R_FLAG;
 			else if (argv[info->start][j] == 't')
-				flags |= T_FLAG;
+				info->flags |= T_FLAG;
 			else
 				throw_usage(argv[info->start][j]);
 		}
@@ -46,3 +47,4 @@ void	read_flags(t_info *info, int argc, char **argv)
 	}
 //	info->start = 1;
 }
+

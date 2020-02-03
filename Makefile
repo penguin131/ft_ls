@@ -1,6 +1,6 @@
 NAME = ft_ls
 
-FILES = main.c add_files.c handle_error.c print_files.c read_folders.c sorting.c read_flags.c
+FILES = main.c add_files.c handle_error.c print_files.c read_folders.c sorting.c read_flags.c print_l.c
 
 S_DIR = src/
 
@@ -10,24 +10,31 @@ SRC = $(addprefix $(S_DIR), $(FILES))
 
 OBJ = $(addprefix $(O_DIR), $(FILES:.c=.o))
 
-FLAGS = -O3
+FLAGS =
 
-all: $(NAME) libft/
+LIB = libft/libft.a
+
+PRINTF = printf/libftprintf.a
+
+all: $(NAME) libft/ printf/
 
 $(NAME) : $(OBJ)
-	make -C libft/
-	gcc -o $(NAME) $(OBJ) -Iinc -L libft libft/libftprintf.a
+	@make -C libft/
+	@make -C printf/
+	@gcc -o $(NAME) $(FLAGS) $(OBJ) -Iinc $(LIB) $(PRINTF)
 
-$(O_DIR)%.o:$(S_DIR)%.c inc
-	mkdir -p $(O_DIR)
-	gcc $(FLAGS) -Iinc -o $@ -c $<
+$(O_DIR)%.o:$(S_DIR)%.c inc/
+	@mkdir -p $(O_DIR)
+	@gcc $(FLAGS) -Iinc -o $@ -c $<
 
 clean:
-	make clean -C libft/
-	rm -rf $(O_DIR)
+	@make clean -C libft/
+	@make clean -C printf/
+	@rm -rf $(O_DIR)
 
 fclean: clean
-	make fclean -C libft/
-	rm -f $(NAME)
+	@make fclean -C libft/
+	@make fclean -C printf/
+	@rm -f $(NAME)
 
 re: fclean all

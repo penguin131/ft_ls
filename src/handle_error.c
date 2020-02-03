@@ -12,25 +12,44 @@
 
 #include "ft_ls.h"
 
-void	free_data(t_file *file)
+void free_data(t_info *info, t_file *file)
 {
 	int	i;
 
 	i = 0;
 	while (file->files && i < file->length)
 	{
-		ft_strdel(&file->files[i].path_name);
+		file->files[i].name[0] = 0;
+		file->files[i].path_name[0] = 0;
+		info->pool_len--;
+		ft_strdel(&file->files[i].username);
+		ft_strdel(&file->files[i].year);
 		if (ft_strcmp(file->files[i].name, ".") != 0
 		&& ft_strcmp(file->files[i].name, "..") != 0
-		&& file->files[i].is_folder == 1)
-			free_data(&file->files[i]);
+		&& S_ISDIR(file->files[i].st_mode))
+			free_data(info, &file->files[i]);
 		i++;
 	}
 	ft_memdel((void**)&file->files);
 }
 
+void	free_list_without_func(t_list **list)
+{
+	t_list	*tmp;
+	t_list	*tmp2;
+
+	tmp = *list;
+	while (tmp)
+	{
+		ft_memdel(&tmp->content);
+		tmp2 = tmp->next;
+		ft_memdel((void**)&tmp);
+		tmp = tmp2;
+	}
+}
+
 void	malloc_error(t_info *info)
 {
-	free_data(&info->mock_folder);
+	free_data(info, &info->mock_folder);
 	exit(0);
 }
