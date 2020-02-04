@@ -32,13 +32,13 @@ void    print_file_type(unsigned long st_mode)
 
 void    print_file_chmod(unsigned long st_mode)
 {
-	char	*str;
+	char	str[10];
 	int		i;
 	short	mask;
 
 	i = 8;
 	mask = 1;
-	str = ft_strdup("rwxrwxrwx");
+	ft_strcpy(&str[0], "rwxrwxrwx");
 	while (i > 0)
 	{
 		if ((st_mode & mask) == 0)
@@ -49,24 +49,35 @@ void    print_file_chmod(unsigned long st_mode)
 	ft_printf("%s", str);
 }
 
+
+void	str_sub(char *dest, char *src, int len)
+{
+	int i;
+
+	i = 0;
+	while (i < len)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = 0;
+}
+
 /*
  * numeric time to string
  */
-void    print_time(t_info *info, time_t time_p)
+void    print_time(time_t time_p)
 {
-	char	*answer;
+	char	answer[13];
 	char	*str;
 	time_t	now_clock;
 
 	str = ctime(&time_p);
 	now_clock = time(0);
-	answer = ft_strsub(str, 4, 12);
+	str_sub(answer, str + 4, 12);
 	if (now_clock < time_p || now_clock - time_p > 15724800)
-		ft_memcpy(answer + 7, str + 19, 5);
-	if (!answer)
-		malloc_error(info);
+		ft_memcpy(&answer[6], str + 19, 5);
 	ft_printf("%s", answer);
-	ft_memdel((void**)&answer);
 }
 
 void	print_link(char *pathname)
@@ -82,7 +93,7 @@ void	print_link(char *pathname)
 		ft_printf(" -> %s", buff);
 }
 
-void    print_l(t_info *info, t_file *file)
+void print_l(t_file *file)
 {
 	int	i;
 
@@ -100,7 +111,7 @@ void    print_l(t_info *info, t_file *file)
 			ft_printf(" ");
 		ft_printf("%*d %s  %s", file->max_n_link_len + 1, file->files[i].n_link, file->files[i].username, file->files[i].year);
 		ft_printf(" %*d ", file->max_size_len + 1, file->files[i].size);
-		print_time(info, file->files[i].time);
+		print_time(file->files[i].time);
 		ft_printf(" %s", file->files[i].name);
 		if (S_ISLNK(file->files[i].st_mode))
 			print_link(file->files[i].path_name);
