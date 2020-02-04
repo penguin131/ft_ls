@@ -48,4 +48,3 @@ void	read_flags(t_info *info, int argc, char **argv)
 		(info->start)++;
 	}
 }
-

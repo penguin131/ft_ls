@@ -44,19 +44,7 @@ unistd.h
 ../../libft/libft.h
 ../libft/libft.h
 
-/Users/bootcamp/Desktop/C/ft_ls/src/add_files.c
-ft_ls.h
-/Users/bootcamp/Desktop/C/ft_ls/src/ft_ls.h
-
-/Users/bootcamp/Desktop/C/ft_ls/src/print_files.c
-ft_ls.h
-/Users/bootcamp/Desktop/C/ft_ls/src/ft_ls.h
-
-/Users/bootcamp/Desktop/C/ft_ls/src/read_flags.c
-ft_ls.h
-/Users/bootcamp/Desktop/C/ft_ls/src/ft_ls.h
-
-/Users/bootcamp/Desktop/C/ft_ls/src/sorting.c
+/Users/bootcamp/Desktop/C/ft_ls/src/main.c
 ft_ls.h
 /Users/bootcamp/Desktop/C/ft_ls/src/ft_ls.h
 

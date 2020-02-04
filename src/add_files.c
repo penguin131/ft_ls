@@ -54,6 +54,8 @@ void	add_new_filename(t_info *info, const char *path, const char *name, t_file *
 	int j;
 
 	j = 0;
+	if (!path)
+		return ;
 	if (info->pool_len < NAMES_CNT)
 	{
 		i = go_to_next_index(info);

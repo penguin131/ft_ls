@@ -35,7 +35,7 @@
 
 #define MAX_PATH_LEN 1024
 #define NAMES_CNT 5000
-#define FLAG_TYPES "alRrt"
+#define FLAG_TYPES "alRrtu"
 
 typedef struct		s_file
 {
