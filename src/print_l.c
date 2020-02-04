@@ -60,14 +60,9 @@ void    print_time(t_info *info, time_t time_p)
 
 	str = ctime(&time_p);
 	now_clock = time(0);
-	if ((info->flags & T_FLAG) != 0)
-		answer = ft_strsub(str, 4, ft_strlen(str + 4) - 1);
-	else
-	{
-		answer = ft_strsub(str, 4, 12);
-		if (now_clock < time_p || now_clock - time_p > 15724800)
-			ft_memcpy(answer + 7, str + 19, 5);
-	}
+	answer = ft_strsub(str, 4, 12);
+	if (now_clock < time_p || now_clock - time_p > 15724800)
+		ft_memcpy(answer + 7, str + 19, 5);
 	if (!answer)
 		malloc_error(info);
 	ft_printf("%s", answer);

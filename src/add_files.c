@@ -32,21 +32,33 @@ void	add_to_reserved_pool(t_info *info, const char *path, const char *name, t_fi
 	ft_lstpush(&info->reserved_names_pool, new_list);
 }
 
+int 	go_to_next_index(t_info *info)
+{
+	int i;
+
+	i = info->current_index;
+	while (i < NAMES_CNT && info->names_pool[i][0])//иду до следующего свободного
+		i++;
+	if (i == NAMES_CNT) i = 0;
+	while (info->names_pool[i][0] && i < info->pool_len)
+		i++;
+	return (i);
+}
+
+/*
+ * Пул имен. Если в нем есть место, то добавляю туда, иначе - в список.
+ */
 void	add_new_filename(t_info *info, const char *path, const char *name, t_file *file)
 {
 	int i;
 	int j;
-	int k;
 
-	i = info->current_index;
 	j = 0;
-	if (info->pool_len < NAMES_CNT)//если еще влазит, то пихаю в статический пул. Иначе - пихаю в список
+	if (!path)
+		return ;
+	if (info->pool_len < NAMES_CNT)
 	{
-		while (i < NAMES_CNT && info->names_pool[i][0])//иду до следующего свободного
-			i++;
-		if (i == NAMES_CNT) i = 0;
-		while (info->names_pool[i][0] && i < info->pool_len)
-			i++;
+		i = go_to_next_index(info);
 		file->path_name = info->names_pool[i];
 		while (path[j])
 		{
@@ -54,12 +66,10 @@ void	add_new_filename(t_info *info, const char *path, const char *name, t_file *
 			j++;
 		}
 		info->names_pool[i][j++] = '/';
-		k = j;
 		file->name = &info->names_pool[i][j];
 		while (*name)
 			info->names_pool[i][j++] = *name++;
 		info->names_pool[i][j] = 0;
-		file->name_len = j - k;
 		info->pool_len++;
 		info->current_index = i;
 	}

@@ -119,7 +119,10 @@ int     main(int argc, char **argv)
 		read_folder_args(&info, argc, argv);
     file_sorting(&info, &info.mock_folder);
 	print_invalid_folders(&info);
-	read_args(&info);
+//	if ((info.flags & D_FLAG) != 0)
+//		read_folder(&info, &info.mock_folder);
+//	else
+		read_args(&info);
     print_buffer(-1);
 	free_info(&info);
 	ft_memdel((void**)&info.mock_folder.files);

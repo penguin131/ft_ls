@@ -53,3 +53,17 @@ void	malloc_error(t_info *info)
 	free_data(info, &info->mock_folder);
 	exit(0);
 }
+
+void    print_invalid_folders(t_info *info)
+{
+	int	i;
+
+	i = 0;
+	while (i < info->mock_folder.length)
+	{
+		if (info->mock_folder.files[i].is_error == 1)
+			ft_printf("ls: %s: No such file or directory\n", info->mock_folder.files[i].name);
+		i++;
+	}
+}
+

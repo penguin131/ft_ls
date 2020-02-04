@@ -28,6 +28,8 @@ int 	get_column_width(t_file *root_file)
 	max = 0;
 	while (i < root_file->length)
 	{
+		while (root_file->files[i].name[root_file->files[i].name_len])
+			root_file->files[i].name_len++;
 		if (root_file->files[i].name_len > max)
 			max = root_file->files[i].name_len;
 		i++;
@@ -60,6 +62,7 @@ void	print_simple(t_file *root_file, struct winsize *w_size)
 
 	col_width = get_column_width(root_file);
 	col_cnt = get_column_count(col_width, w_size);
+	col_cnt  == 0 ? col_cnt++ : 0;
 	lines_cnt = get_lines_count(root_file->length, col_cnt);
 	i = 0;
 	while (i < lines_cnt)
@@ -93,18 +96,5 @@ void	print_files(t_info *info, t_file *file)
 	{
 		ioctl(STDOUT_FILENO, TIOCGWINSZ, &w_size);//ширина экрана, ws_col - ширина
 		print_simple(file, &w_size);
-	}
-}
-
-void    print_invalid_folders(t_info *info)
-{
-	int	i;
-
-	i = 0;
-	while (i < info->mock_folder.length)
-	{
-		if (info->mock_folder.files[i].is_error == 1)
-			ft_printf("ls: %s: No such file or directory\n", info->mock_folder.files[i].name);
-		i++;
 	}
 }

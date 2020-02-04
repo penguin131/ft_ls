@@ -79,7 +79,7 @@ void	read_file_input(t_info *info, t_file *input_file, struct dirent *read_file)
 			input_file->max_n_link_len = long_capacity(buff.st_nlink);
 		if (long_capacity(new_file.size) > input_file->max_size_len)
 			input_file->max_size_len = long_capacity(new_file.size);
-		new_file.time = buff.st_atime;
+		new_file.time = (info->flags & U_FLAG) != 0 ? buff.st_atime : buff.st_mtime;
 		pw = getpwuid(buff.st_uid);
 		gr = getgrgid(buff.st_gid);
 		if ( (pw && !(new_file.username = ft_strdup(pw->pw_name))) ||
