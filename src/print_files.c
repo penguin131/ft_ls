@@ -91,7 +91,7 @@ void	print_files(t_info *info, t_file *file)
 		info->is_not_first = 1;
     }
 	if ((info->flags & L_FLAG) != 0)
-	    print_l(info, file);
+		print_l(file);
 	else
 	{
 		ioctl(STDOUT_FILENO, TIOCGWINSZ, &w_size);//ширина экрана, ws_col - ширина

@@ -23,12 +23,10 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/sorting.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/sorting.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/ft_ls" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ft_ls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ft_ls" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/ft_ls.h" beforeDir="false" afterPath="$PROJECT_DIR$/inc/ft_ls.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/add_files.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/add_files.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/main.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/read_flags.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/read_flags.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/add_files.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/add_files.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/read_flags.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/read_flags.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/print_l.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/print_l.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +78,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="ft_ls" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-d ../ ../src" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ft_ls" TARGET_NAME="ft_ls" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ft_ls" RUN_TARGET_NAME="ft_ls">
+    <configuration name="ft_ls" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-l ../" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ft_ls" TARGET_NAME="ft_ls" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ft_ls" RUN_TARGET_NAME="ft_ls">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -130,7 +128,7 @@
       <workItem from="1580032182892" duration="9454000" />
       <workItem from="1580667964296" duration="19237000" />
       <workItem from="1580791573494" duration="7321000" />
-      <workItem from="1580845385164" duration="5686000" />
+      <workItem from="1580845385164" duration="6980000" />
     </task>
     <task id="LOCAL-00001" summary="dev">
       <created>1579512703465</created>
@@ -237,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580853314892</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="-u flag">
+      <created>1580855449662</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1580855449662</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,62 +277,62 @@
     <option name="LAST_COMMIT_MESSAGE" value="-u flag" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="360" y="222" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580854371344">
+    <state x="360" y="222" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580856369098">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="360" y="222" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1580854371344" />
-    <state x="479" y="162" key="CommitChangelistDialog2" timestamp="1580853314706">
+    <state x="360" y="222" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1580856369098" />
+    <state x="479" y="162" key="CommitChangelistDialog2" timestamp="1580855449511">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="479" y="162" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1580853314706" />
-    <state width="1750" height="353" key="GridCell.Tab.0.bottom" timestamp="1580854632845">
+    <state x="479" y="162" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1580855449511" />
+    <state width="1750" height="419" key="GridCell.Tab.0.bottom" timestamp="1580856781416">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="353" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1580854632845" />
+    <state width="1750" height="419" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1580856781416" />
     <state width="1750" height="353" key="GridCell.Tab.0.bottom/0.23.1792.1017@0.23.1792.1017" timestamp="1580837852534" />
-    <state width="1750" height="353" key="GridCell.Tab.0.center" timestamp="1580854632844">
+    <state width="1750" height="419" key="GridCell.Tab.0.center" timestamp="1580856781415">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="353" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1580854632844" />
+    <state width="1750" height="419" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1580856781415" />
     <state width="1750" height="353" key="GridCell.Tab.0.center/0.23.1792.1017@0.23.1792.1017" timestamp="1580837852533" />
-    <state width="1750" height="353" key="GridCell.Tab.0.left" timestamp="1580854632843">
+    <state width="1750" height="419" key="GridCell.Tab.0.left" timestamp="1580856781414">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="353" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1580854632843" />
+    <state width="1750" height="419" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1580856781414" />
     <state width="1750" height="353" key="GridCell.Tab.0.left/0.23.1792.1017@0.23.1792.1017" timestamp="1580837852530" />
-    <state width="1750" height="353" key="GridCell.Tab.0.right" timestamp="1580854632845">
+    <state width="1750" height="419" key="GridCell.Tab.0.right" timestamp="1580856781416">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="353" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1580854632845" />
+    <state width="1750" height="419" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1580856781416" />
     <state width="1750" height="353" key="GridCell.Tab.0.right/0.23.1792.1017@0.23.1792.1017" timestamp="1580837852534" />
-    <state width="1750" height="353" key="GridCell.Tab.1.bottom" timestamp="1580854632848">
+    <state width="1750" height="353" key="GridCell.Tab.1.bottom" timestamp="1580856661595">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="353" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1580854632848" />
+    <state width="1750" height="353" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1580856661595" />
     <state width="1750" height="353" key="GridCell.Tab.1.bottom/0.23.1792.1017@0.23.1792.1017" timestamp="1580837852536" />
-    <state width="1750" height="353" key="GridCell.Tab.1.center" timestamp="1580854632847">
+    <state width="1750" height="353" key="GridCell.Tab.1.center" timestamp="1580856661594">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="353" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1580854632847" />
+    <state width="1750" height="353" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1580856661594" />
     <state width="1750" height="353" key="GridCell.Tab.1.center/0.23.1792.1017@0.23.1792.1017" timestamp="1580837852535" />
-    <state width="1750" height="353" key="GridCell.Tab.1.left" timestamp="1580854632846">
+    <state width="1750" height="353" key="GridCell.Tab.1.left" timestamp="1580856661593">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="353" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1580854632846" />
+    <state width="1750" height="353" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1580856661593" />
     <state width="1750" height="353" key="GridCell.Tab.1.left/0.23.1792.1017@0.23.1792.1017" timestamp="1580837852534" />
-    <state width="1750" height="353" key="GridCell.Tab.1.right" timestamp="1580854632847">
+    <state width="1750" height="353" key="GridCell.Tab.1.right" timestamp="1580856661595">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="353" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1580854632847" />
+    <state width="1750" height="353" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1580856661595" />
     <state width="1750" height="353" key="GridCell.Tab.1.right/0.23.1792.1017@0.23.1792.1017" timestamp="1580837852535" />
     <state x="397" y="199" key="SettingsEditor" timestamp="1580845570236">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="397" y="199" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1580845570236" />
-    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1580853316808">
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1580855453100">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="496" y="300" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1580853316808" />
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1580855453100" />
     <state x="573" y="392" key="com.intellij.ide.util.TipDialog" timestamp="1580791574574">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -340,5 +345,9 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="642" y="280" key="git4idea.branch.GitSmartOperationDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1580536860025" />
+    <state x="658" y="198" key="refactoring.ChangeSignatureDialog" timestamp="1580856863755">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="658" y="198" key="refactoring.ChangeSignatureDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1580856863755" />
   </component>
 </project>
