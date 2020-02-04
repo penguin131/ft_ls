@@ -31,6 +31,7 @@
 #define A_FLAG 0b00100000
 #define T_FLAG 0b00010000
 #define REC_FL 0b00001000
+#define U_FLAG 0b00000100
 
 #define MAX_PATH_LEN 1024
 #define NAMES_CNT 5000

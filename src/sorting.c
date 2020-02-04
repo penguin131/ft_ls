@@ -14,6 +14,8 @@
 
 int files_comparer(t_info *info, t_file file1, t_file file2)
 {
+	if (info->flags & T_FLAG)
+		return (info->flags & R_FLAG) == 0 ? file1.time > file2.time : file1.time < file2.time;
 	return (info->flags & R_FLAG) == 0 ? ft_strcmp(file1.name, file2.name) < 0 : ft_strcmp(file1.name, file2.name) > 0;
 }
 
