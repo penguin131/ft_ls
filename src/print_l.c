@@ -49,6 +49,9 @@ void    print_file_chmod(unsigned long st_mode)
 	ft_printf("%s", str);
 }
 
+/*
+ * numeric time to string
+ */
 void    print_time(t_info *info, time_t time_p)
 {
 	char	*answer;

@@ -33,6 +33,21 @@ void free_data(t_info *info, t_file *file)
 	ft_memdel((void**)&file->files);
 }
 
+void	free_list_without_func(t_list **list)
+{
+	t_list	*tmp;
+	t_list	*tmp2;
+
+	tmp = *list;
+	while (tmp)
+	{
+		ft_memdel(&tmp->content);
+		tmp2 = tmp->next;
+		ft_memdel((void**)&tmp);
+		tmp = tmp2;
+	}
+}
+
 void	malloc_error(t_info *info)
 {
 	free_data(info, &info->mock_folder);

@@ -36,6 +36,7 @@ void	add_new_filename(t_info *info, const char *path, const char *name, t_file *
 {
 	int i;
 	int j;
+	int k;
 
 	i = info->current_index;
 	j = 0;
@@ -53,10 +54,12 @@ void	add_new_filename(t_info *info, const char *path, const char *name, t_file *
 			j++;
 		}
 		info->names_pool[i][j++] = '/';
+		k = j;
 		file->name = &info->names_pool[i][j];
 		while (*name)
 			info->names_pool[i][j++] = *name++;
 		info->names_pool[i][j] = 0;
+		file->name_len = j - k;
 		info->pool_len++;
 		info->current_index = i;
 	}

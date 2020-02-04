@@ -19,6 +19,7 @@
 
 #include <sys/stat.h>
 #include <sys/xattr.h>
+#include <sys/ioctl.h>
 
 #include <dirent.h>
 #include <time.h>
@@ -40,6 +41,7 @@ typedef struct		s_file
 	char 			*name;
 	char			*path_name;
 	char 			is_error;
+	int				name_len;
 	int 			length;
 	int 			capacity;
 	int				size;
@@ -79,5 +81,6 @@ void	read_flags(t_info *info, int argc, char **argv);
 int		is_hidden_root(t_info *info, const char *name);
 void	add_new_filename(t_info *info, const char *path, const char *name, t_file *file);
 void    print_l(t_info *info, t_file *file);
+void	free_list_without_func(t_list **list);
 
 #endif

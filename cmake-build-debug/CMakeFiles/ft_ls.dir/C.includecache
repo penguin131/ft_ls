@@ -17,6 +17,8 @@ sys/stat.h
 -
 sys/xattr.h
 -
+sys/ioctl.h
+-
 dirent.h
 -
 time.h
@@ -42,7 +44,7 @@ unistd.h
 ../../libft/libft.h
 ../libft/libft.h
 
-/Users/bootcamp/Desktop/C/ft_ls/src/print_l.c
+/Users/bootcamp/Desktop/C/ft_ls/src/print_files.c
 ft_ls.h
 /Users/bootcamp/Desktop/C/ft_ls/src/ft_ls.h
 

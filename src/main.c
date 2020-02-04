@@ -58,8 +58,6 @@ void	read_args(t_info *info)
 void	free_info(t_info *info)
 {
 	int		i;
-	t_list	*tmp;
-	t_list	*tmp2;
 
 	i = 0;
 	while (i < info->mock_folder.length)
@@ -71,14 +69,7 @@ void	free_info(t_info *info)
 		free_data(info, &info->mock_folder.files[i]);
 		i++;
 	}
-	tmp = info->reserved_names_pool;
-	while (tmp)
-	{
-		ft_memdel(&tmp->content);
-		tmp2 = tmp->next;
-		ft_memdel((void**)&tmp);
-		tmp = tmp2;
-	}
+	free_list_without_func(&info->reserved_names_pool);
 	i = 0;
 	while (i < NAMES_CNT)
 	{
