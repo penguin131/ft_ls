@@ -42,6 +42,7 @@ typedef struct		s_file
 	char 			*name;
 	char			*path_name;
 	char 			is_error;
+	char 			is_reserved;
 	int				name_len;
 	int 			length;
 	int 			capacity;

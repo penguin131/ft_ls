@@ -30,6 +30,7 @@ void	add_to_reserved_pool(t_info *info, const char *path, const char *name, t_fi
 	ft_strcat(pool_name, name);
 	new_list->content = (void*)pool_name;
 	ft_lstpush(&info->reserved_names_pool, new_list);
+	file->is_reserved = 1;
 }
 
 int 	go_to_next_index(t_info *info)
@@ -54,8 +55,6 @@ void	add_new_filename(t_info *info, const char *path, const char *name, t_file *
 	int j;
 
 	j = 0;
-//	if (!path)
-//		return ;
 	if (info->pool_len < NAMES_CNT)
 	{
 		i = go_to_next_index(info);
@@ -110,9 +109,6 @@ void	malloc_pool(t_info *info)
 			malloc_error(info);
 		i++;
 	}
-	/**
-	 * malloc buffer! need free.
-	 */
 	if (!(result.buff = ft_memalloc(sizeof(char) * BUFF_SIZE_P)))
 		malloc_error(info);
 }

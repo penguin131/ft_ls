@@ -19,9 +19,12 @@ void free_data(t_info *info, t_file *file)
 	i = 0;
 	while (file->files && i < file->length)
 	{
-		file->files[i].name[0] = 0;
-		file->files[i].path_name[0] = 0;
-		info->pool_len--;
+		if (!file->files[i].is_reserved)
+		{
+			file->files[i].name[0] = 0;
+			file->files[i].path_name[0] = 0;
+			info->pool_len--;
+		}
 		ft_strdel(&file->files[i].username);
 		ft_strdel(&file->files[i].year);
 		if (ft_strcmp(file->files[i].name, ".") != 0
