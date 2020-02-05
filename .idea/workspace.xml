@@ -13,20 +13,27 @@
   <component name="ChangeListManager">
     <list default="true" id="3d84d632-63c9-46a7-82b0-dde20a18e17b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/add_files.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/add_files.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/handle_error.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/handle_error.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/main.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/print_files.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/print_files.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/read_flags.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/read_flags.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/read_folders.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/read_folders.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/sorting.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_ls.dir/src/sorting.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/ft_ls" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ft_ls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ft_ls" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_ls.dSYM/Contents/Resources/DWARF/ft_ls" beforeDir="false" afterPath="$PROJECT_DIR$/ft_ls.dSYM/Contents/Resources/DWARF/ft_ls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/ft_ls.h" beforeDir="false" afterPath="$PROJECT_DIR$/inc/ft_ls.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/libft.a" beforeDir="false" afterPath="$PROJECT_DIR$/libft/libft.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/add_files.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/add_files.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/handle_error.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/handle_error.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/main.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/print_files.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/print_files.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/read_flags.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/read_flags.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/read_folders.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/read_folders.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/sorting.o" beforeDir="false" afterPath="$PROJECT_DIR$/obj/sorting.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/printf/libftprintf.a" beforeDir="false" afterPath="$PROJECT_DIR$/printf/libftprintf.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/add_files.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/add_files.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/print_l.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/print_l.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/read_folders.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/read_folders.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sorting.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/sorting.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +135,8 @@
       <workItem from="1580032182892" duration="9454000" />
       <workItem from="1580667964296" duration="19237000" />
       <workItem from="1580791573494" duration="7321000" />
-      <workItem from="1580845385164" duration="6980000" />
+      <workItem from="1580845385164" duration="7188000" />
+      <workItem from="1580866385904" duration="1989000" />
     </task>
     <task id="LOCAL-00001" summary="dev">
       <created>1579512703465</created>
@@ -242,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580855449662</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="-2 malloc">
+      <created>1580856920505</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1580856920505</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,73 +289,74 @@
     <MESSAGE value="ls -l links print fix" />
     <MESSAGE value="simple print" />
     <MESSAGE value="-u flag" />
-    <option name="LAST_COMMIT_MESSAGE" value="-u flag" />
+    <MESSAGE value="-2 malloc" />
+    <option name="LAST_COMMIT_MESSAGE" value="-2 malloc" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="360" y="222" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580856369098">
+    <state x="360" y="222" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580867103734">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="360" y="222" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1580856369098" />
-    <state x="479" y="162" key="CommitChangelistDialog2" timestamp="1580855449511">
+    <state x="360" y="222" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1580867103734" />
+    <state x="479" y="162" key="CommitChangelistDialog2" timestamp="1580856920322">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="479" y="162" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1580855449511" />
-    <state width="1750" height="419" key="GridCell.Tab.0.bottom" timestamp="1580856781416">
+    <state x="479" y="162" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1580856920322" />
+    <state width="1750" height="353" key="GridCell.Tab.0.bottom" timestamp="1580867852640">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="419" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1580856781416" />
+    <state width="1750" height="353" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1580867852640" />
     <state width="1750" height="353" key="GridCell.Tab.0.bottom/0.23.1792.1017@0.23.1792.1017" timestamp="1580837852534" />
-    <state width="1750" height="419" key="GridCell.Tab.0.center" timestamp="1580856781415">
+    <state width="1750" height="353" key="GridCell.Tab.0.center" timestamp="1580867852639">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="419" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1580856781415" />
+    <state width="1750" height="353" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1580867852639" />
     <state width="1750" height="353" key="GridCell.Tab.0.center/0.23.1792.1017@0.23.1792.1017" timestamp="1580837852533" />
-    <state width="1750" height="419" key="GridCell.Tab.0.left" timestamp="1580856781414">
+    <state width="1750" height="353" key="GridCell.Tab.0.left" timestamp="1580867852638">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="419" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1580856781414" />
+    <state width="1750" height="353" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1580867852638" />
     <state width="1750" height="353" key="GridCell.Tab.0.left/0.23.1792.1017@0.23.1792.1017" timestamp="1580837852530" />
-    <state width="1750" height="419" key="GridCell.Tab.0.right" timestamp="1580856781416">
+    <state width="1750" height="353" key="GridCell.Tab.0.right" timestamp="1580867852639">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="419" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1580856781416" />
+    <state width="1750" height="353" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1580867852639" />
     <state width="1750" height="353" key="GridCell.Tab.0.right/0.23.1792.1017@0.23.1792.1017" timestamp="1580837852534" />
-    <state width="1750" height="353" key="GridCell.Tab.1.bottom" timestamp="1580856661595">
+    <state width="1750" height="353" key="GridCell.Tab.1.bottom" timestamp="1580867852641">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="353" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1580856661595" />
+    <state width="1750" height="353" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1580867852641" />
     <state width="1750" height="353" key="GridCell.Tab.1.bottom/0.23.1792.1017@0.23.1792.1017" timestamp="1580837852536" />
-    <state width="1750" height="353" key="GridCell.Tab.1.center" timestamp="1580856661594">
+    <state width="1750" height="353" key="GridCell.Tab.1.center" timestamp="1580867852641">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="353" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1580856661594" />
+    <state width="1750" height="353" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1580867852641" />
     <state width="1750" height="353" key="GridCell.Tab.1.center/0.23.1792.1017@0.23.1792.1017" timestamp="1580837852535" />
-    <state width="1750" height="353" key="GridCell.Tab.1.left" timestamp="1580856661593">
+    <state width="1750" height="353" key="GridCell.Tab.1.left" timestamp="1580867852640">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="353" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1580856661593" />
+    <state width="1750" height="353" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1580867852640" />
     <state width="1750" height="353" key="GridCell.Tab.1.left/0.23.1792.1017@0.23.1792.1017" timestamp="1580837852534" />
-    <state width="1750" height="353" key="GridCell.Tab.1.right" timestamp="1580856661595">
+    <state width="1750" height="353" key="GridCell.Tab.1.right" timestamp="1580867852641">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="353" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1580856661595" />
+    <state width="1750" height="353" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1580867852641" />
     <state width="1750" height="353" key="GridCell.Tab.1.right/0.23.1792.1017@0.23.1792.1017" timestamp="1580837852535" />
     <state x="397" y="199" key="SettingsEditor" timestamp="1580845570236">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="397" y="199" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1580845570236" />
-    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1580855453100">
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1580856922828">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="496" y="300" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1580855453100" />
-    <state x="573" y="392" key="com.intellij.ide.util.TipDialog" timestamp="1580791574574">
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1580856922828" />
+    <state x="573" y="392" key="com.intellij.ide.util.TipDialog" timestamp="1580866386337">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="573" y="392" key="com.intellij.ide.util.TipDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1580791574574" />
-    <state x="536" y="140" width="993" height="762" key="find.popup" timestamp="1580853068798">
+    <state x="573" y="392" key="com.intellij.ide.util.TipDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1580866386337" />
+    <state x="536" y="140" width="993" height="762" key="find.popup" timestamp="1580867581271">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="536" y="140" width="993" height="762" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1580853068798" />
+    <state x="536" y="140" width="993" height="762" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1580867581271" />
     <state x="642" y="280" key="git4idea.branch.GitSmartOperationDialog" timestamp="1580536860025">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>

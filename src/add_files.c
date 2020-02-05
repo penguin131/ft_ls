@@ -54,8 +54,8 @@ void	add_new_filename(t_info *info, const char *path, const char *name, t_file *
 	int j;
 
 	j = 0;
-	if (!path)
-		return ;
+//	if (!path)
+//		return ;
 	if (info->pool_len < NAMES_CNT)
 	{
 		i = go_to_next_index(info);
@@ -95,4 +95,24 @@ void	add_new_file(t_info *info, t_file *root_file, t_file *new_file)
 	}
 	root_file->files[root_file->length] = *new_file;
 	root_file->length++;
+}
+
+void	malloc_pool(t_info *info)
+{
+	int i;
+
+	if (!(info->names_pool = ft_memalloc(sizeof(char*) * NAMES_CNT)))
+		malloc_error(info);
+	i = 0;
+	while (i < NAMES_CNT)
+	{
+		if (!(info->names_pool[i] = ft_memalloc(sizeof(char) * MAX_PATH_LEN + 1)))
+			malloc_error(info);
+		i++;
+	}
+	/**
+	 * malloc buffer! need free.
+	 */
+	if (!(result.buff = ft_memalloc(sizeof(char) * BUFF_SIZE_P)))
+		malloc_error(info);
 }

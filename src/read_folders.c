@@ -69,24 +69,23 @@ void	read_file_input(t_info *info, t_file *input_file, struct dirent *read_file)
 
 	ft_bzero(&new_file, sizeof(t_file));
 	add_new_filename(info, input_file->path_name, read_file->d_name, &new_file);
-	if (lstat(new_file.path_name, &buff) != -1)
-	{
-		new_file.st_mode = buff.st_mode;
-		new_file.size = buff.st_size;
-		new_file.n_link = buff.st_nlink;
-		input_file->total_n_link += buff.st_blocks;
-		if (long_capacity(buff.st_nlink) > input_file->max_n_link_len)
-			input_file->max_n_link_len = long_capacity(buff.st_nlink);
-		if (long_capacity(new_file.size) > input_file->max_size_len)
-			input_file->max_size_len = long_capacity(new_file.size);
-		new_file.time = (info->flags & U_FLAG) != 0 ? buff.st_atime : buff.st_mtime;
-		pw = getpwuid(buff.st_uid);
-		gr = getgrgid(buff.st_gid);
-		if ( (pw && !(new_file.username = ft_strdup(pw->pw_name))) ||
-			 (gr && !(new_file.year = ft_strdup(gr->gr_name))))
-			malloc_error(info);
-		add_new_file(info, input_file, &new_file);//добавляю новый файл в динамический массив
-	}
+	if (lstat(new_file.path_name, &buff) == -1)
+		return ;
+	new_file.st_mode = buff.st_mode;
+	new_file.size = buff.st_size;
+	new_file.n_link = buff.st_nlink;
+	input_file->total_n_link += buff.st_blocks;
+	if (long_capacity(buff.st_nlink) > input_file->max_n_link_len)
+		input_file->max_n_link_len = long_capacity(buff.st_nlink);
+	if (long_capacity(new_file.size) > input_file->max_size_len)
+		input_file->max_size_len = long_capacity(new_file.size);
+	new_file.time = (info->flags & U_FLAG) != 0 ? buff.st_atime : buff.st_mtime;
+	pw = getpwuid(buff.st_uid);
+	gr = getgrgid(buff.st_gid);
+	if ( (pw && !(new_file.username = ft_strdup(pw->pw_name))) ||
+		 (gr && !(new_file.year = ft_strdup(gr->gr_name))))
+		malloc_error(info);
+	add_new_file(info, input_file, &new_file);//добавляю новый файл в динамический массив
 }
 
 void    read_folder(t_info *info, t_file *input_file)
@@ -105,8 +104,8 @@ void    read_folder(t_info *info, t_file *input_file)
 		read_file_input(info, input_file, read_file);
 	}
 	closedir(dir);
-    file_sorting(info, input_file);
-	print_files(info, input_file);
+    file_sorting(info, input_file);//1.3->1.4s time ./ft_ls -lR ~/
+	print_files(info, input_file);//+ 0.9s time ./ft_ls -lR ~/
 	if ((info->flags & REC_FL) != 0)
 		read_nested_folders(info, input_file);
 	free_data(info, input_file);

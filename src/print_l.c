@@ -49,20 +49,6 @@ void    print_file_chmod(unsigned long st_mode)
 	ft_printf("%s", str);
 }
 
-
-void	str_sub(char *dest, char *src, int len)
-{
-	int i;
-
-	i = 0;
-	while (i < len)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = 0;
-}
-
 /*
  * numeric time to string
  */
@@ -74,7 +60,7 @@ void    print_time(time_t time_p)
 
 	str = ctime(&time_p);
 	now_clock = time(0);
-	str_sub(answer, str + 4, 12);
+	ft_memcpy(answer, str + 4, 12);
 	if (now_clock < time_p || now_clock - time_p > 15724800)
 		ft_memcpy(&answer[6], str + 19, 5);
 	ft_printf("%s", answer);
@@ -104,13 +90,13 @@ void print_l(t_file *file)
 	{
 		print_file_type(file->files[i].st_mode);
 		print_file_chmod(file->files[i].st_mode);
-		if ((S_ISLNK(file->files[i].st_mode) && listxattr(file->files[i].path_name, NULL, 0, XATTR_NOFOLLOW) > 0) ||
+		if ((S_ISLNK(file->files[i].st_mode) &&
+			listxattr(file->files[i].path_name, NULL, 0, XATTR_NOFOLLOW) > 0) ||
 			(listxattr(file->files[i].path_name, NULL, 0, 0) > 0))
 			ft_printf("@");
 		else
 			ft_printf(" ");
-		ft_printf("%*d %s  %s", file->max_n_link_len + 1, file->files[i].n_link, file->files[i].username, file->files[i].year);
-		ft_printf(" %*d ", file->max_size_len + 1, file->files[i].size);
+		ft_printf("%*d %s  %s %*d ", file->max_n_link_len + 1, file->files[i].n_link,file->files[i].username, file->files[i].year, file->max_size_len + 1, file->files[i].size);
 		print_time(file->files[i].time);
 		ft_printf(" %s", file->files[i].name);
 		if (S_ISLNK(file->files[i].st_mode))
